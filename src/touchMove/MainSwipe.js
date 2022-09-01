@@ -30,9 +30,6 @@ serviceCover.addEventListener("touchmove", () => {
   userHasScrolled = true;
 });
 
-
-
-
 // serviceCover2.addEventListener('touchmove', () => {
 //     userHasScrolled = true
 // })
@@ -44,15 +41,19 @@ serviceCover.addEventListener("touchmove", () => {
 // document.addEventListener('touchstart', handleTouchStart, false);
 // document.addEventListener('touchmove', handleTouchMove, false);
 
-serviceCover.addEventListener("touchstart", handleTouchStart, { capture: true });
+serviceCover.addEventListener("touchstart", handleTouchStart, {
+  capture: true,
+});
 serviceCover.addEventListener("touchmove", handleTouchMove, { capture: true });
 
-projectCover.addEventListener("touchstart", handleTouchStart3, { capture: true });
+projectCover.addEventListener("touchstart", handleTouchStart3, {
+  capture: true,
+});
 projectCover.addEventListener("touchmove", handleTouchMove3, { capture: true });
 
-
-
-contactCover.addEventListener("touchstart", handleTouchStart2, { capture: true });
+contactCover.addEventListener("touchstart", handleTouchStart2, {
+  capture: true,
+});
 contactCover.addEventListener("touchmove", handleTouchMove2, { capture: true });
 
 serviceCover.addEventListener("click", handleTouchMove, { capture: true });
@@ -65,8 +66,10 @@ let xDown = null;
 let yDown = null;
 
 function getTouches(evt) {
-  return evt.touches || // browser API
-        evt.originalEvent.touches; // jQuery
+  return (
+    evt.touches || // browser API
+    evt.originalEvent.touches
+  ); // jQuery
 }
 
 function handleTouchStart(evt) {
@@ -86,12 +89,14 @@ function handleTouchMove(evt) {
   let xDiff = xDown - xUp;
   let yDiff = yDown - yUp;
 
-  if (Math.abs(xDiff) > Math.abs(yDiff)) {/* most significant*/
+  if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    /* most significant*/
     if (xDiff > 0) {
     } else {
       serviceCover.style.transition = "transform 1s ease-in";
       serviceCover.style.transform = "translateX(100%)";
-      document.querySelector(".services-body__right").style.visibility = "visible";
+      document.querySelector(".services-body__right").style.visibility =
+        "visible";
     }
   } else {
     if (yDiff > 0) {
@@ -113,9 +118,6 @@ function handleTouchStart2(evt) {
 }
 
 function handleTouchMove2(evt) {
-
-
-
   if (!xDown || !yDown) {
     return;
   }
@@ -126,15 +128,16 @@ function handleTouchMove2(evt) {
   let xDiff = xDown - xUp;
   let yDiff = yDown - yUp;
 
-  if (Math.abs(xDiff) > Math.abs(yDiff)) {/* most significant*/
+  if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    /* most significant*/
     if (xDiff > 0) {
       // left swipe
-
     } else {
       // swipe right
       contactCover.style.transition = "transform 1s ease-in";
       contactCover.style.transform = "translateX(150%)";
-      document.querySelector(".contact-body__right").style.visibility = "visible";
+      document.querySelector(".contact-body__right").style.visibility =
+        "visible";
     }
   } else {
     if (yDiff > 0) {
@@ -166,12 +169,14 @@ function handleTouchMove3(evt) {
   let xDiff = xDown - xUp;
   let yDiff = yDown - yUp;
 
-  if (Math.abs(xDiff) > Math.abs(yDiff)) {/* most significant*/
+  if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    /* most significant*/
     if (xDiff > 0) {
       // left swipe
       projectCover.style.transition = "transform 1s ease-in";
       projectCover.style.transform = "translateX(-150%)";
-      document.querySelector(".project-body__right").style.visibility = "visible";
+      document.querySelector(".project-body__right").style.visibility =
+        "visible";
       let bulletws = document.querySelector(".mobile__pagination").children;
       Array.from(bulletws).forEach((el, index) => {
         index++;
@@ -198,23 +203,21 @@ function handleTouchMove3(evt) {
   yDown = null;
 }
 
-
-
 // for blogs and careers touchscroll
 
-let blogsArea = document.querySelector('.blogsArea')
-let careersArea = document.querySelector('.careersArea')
+let blogsArea = document.querySelector(".blogsArea");
+let careersArea = document.querySelector(".careersArea");
 
-blogsArea.addEventListener('touchmove', () => {
+blogsArea.addEventListener("touchmove", () => {
   $.fn.fullpage.setAllowScrolling(false);
-})
-blogsArea.addEventListener('touchend', () =>{
+});
+blogsArea.addEventListener("touchend", () => {
   $.fn.fullpage.setAllowScrolling(true);
-})
+});
 
-careersArea.addEventListener('touchmove', () => {
+careersArea.addEventListener("touchmove", () => {
   $.fn.fullpage.setAllowScrolling(false);
-})
-careersArea.addEventListener('touchend', () =>{
+});
+careersArea.addEventListener("touchend", () => {
   $.fn.fullpage.setAllowScrolling(true);
-})
+});
