@@ -41,7 +41,7 @@ let customersObj = [
 ];
 
 customersObj.map((service) => {
-  document.querySelector("." + service.name).innerHTML =
+  document.querySelector("." + service.name).src =
     config.customersTextData[service.name];
   document
     .querySelector("." + service.name)
@@ -51,18 +51,51 @@ customersObj.map((service) => {
 // services content
 
 let servicesObj = [
-  { title: "services-1-1__title", ul: "services-1-1__ul" },
-  { title: "services-1-2__title", ul: "services-1-2__ul" },
-  { title: "services-1-3__title", ul: "services-1-3__ul" },
-  { title: "services-2-1__title", ul: "services-2-1__ul" },
-  { title: "services-2-2__title", ul: "services-2-2__ul" },
-  { title: "services-2-3__title", ul: "services-2-3__ul" },
-  { title: "services-3-1__title", ul: "services-3-1__ul" },
-  { title: "services-3-2__title" },
-  { title: "services-3-2__title1" },
+  {
+    title: "services-1-1__title",
+    ul: "services-1-1__ul",
+    img: "service_logo1",
+  },
+  {
+    title: "services-1-2__title",
+    ul: "services-1-2__ul",
+    img: "service_logo2",
+  },
+  {
+    title: "services-1-3__title",
+    ul: "services-1-3__ul",
+    img: "service_logo3",
+  },
+  {
+    title: "services-2-1__title",
+    ul: "services-2-1__ul",
+    img: "service_logo4",
+  },
+  {
+    title: "services-2-2__title",
+    ul: "services-2-2__ul",
+    img: "service_logo5",
+  },
+  {
+    title: "services-2-3__title",
+    ul: "services-2-3__ul",
+    img: "service_logo6",
+  },
+  {
+    title: "services-3-1__title",
+    ul: "services-3-1__ul",
+    img: "service_logo7",
+  },
+  { title: "services-3-2__title", img: "service_logo7" },
+  { title: "services-3-2__title1", img: "service_logo8" },
 ];
 
 servicesObj.map((service) => {
+  document.querySelector(`.${service.img}`).src =
+    config.servicesTextData[service.img];
+
+  console.log(config.servicesTextData[service.img], " zimbabue");
+
   document.querySelector("." + service.title).innerHTML =
     config.servicesTextData[service.title];
   if (service.ul) {

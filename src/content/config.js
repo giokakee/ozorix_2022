@@ -166,9 +166,10 @@ export let config = {
   aboutUsTextData: `
     We are Ozorix, a Digital agency specializing in complex IT solutions. 
     Our goal is to create, effective business solutions customized to clients needs. 
+    <br /> <br /> <br />
     
     Our team has 20 years of experience in building complex digital  systems for businesses of every size and industry. They are highly  qualified maximalists, and enthusiasts. 
-    
+    <br /> <br /> <br />
     The 21st century is an inexhaustible source of innovative opportunities that enable us to spread our wings on a larger scale and achieve the  best results. `,
 
   contactTextData: {
@@ -183,25 +184,25 @@ export let config = {
   },
 
   customersTextData: {
-    "customers-1-1": "SIEMENS",
+    "customers-1-1": "./assets/customers/data-science.png",
     "customers-1-1Href": "#",
-    "customers-1-2": "CITYCOM",
+    "customers-1-2": "./assets/customers/007-blockchain.png",
     "customers-1-2Href": "#",
-    "customers-1-3": "TRACKSTAT",
+    "customers-1-3": "./assets/customers/001-data-science.png",
     "customers-1-3Href": "#",
-    "customers-2-1": "TREK10",
+    "customers-2-1": "./assets/customers/001-data-science.png",
     "customers-2-1Href": "#",
-    "customers-2-2": "WURTH",
+    "customers-2-2": "./assets/customers/001-data-science.png",
     "customers-2-2Href": "#",
-    "customers-2-3": "BIVLAB",
+    "customers-2-3": "./assets/customers/001-data-science.png",
     "customers-2-3Href": "#",
-    "customers-3-1": "GEOLAND",
+    "customers-3-1": "./assets/customers/001-data-science.png",
     "customers-3-1Href": "#",
-    "customers-3-2": "DSCAPE",
+    "customers-3-2": "./assets/customers/001-data-science.png",
     "customers-3-2Href": "#",
-    "customers-3-3": "INTRANOTE",
+    "customers-3-3": "./assets/customers/001-data-science.png",
     "customers-3-3Href": "#",
-    "customers-4-1": "BLOCKCHAIN SYSTEMS",
+    "customers-4-1": "./assets/customers/001-data-science.png",
     "customers-4-1Href": "#",
   },
 
@@ -318,6 +319,7 @@ export let config = {
 
   servicesTextData: {
     "services-1-1__title": "Data Science",
+    service_logo1: "./assets/customers/data-science.png",
     "services-1-1__ul": `
       <li> Data analytics; </li>
       <li> Business intelligence; </li>
@@ -325,18 +327,21 @@ export let config = {
       <li> Deep learning. </li>`,
 
     "services-1-2__title": "AWS Solutions",
+    service_logo2: "./assets/customers/cloud-service.png",
     "services-1-2__ul": `
       <li> AWS Migration; </li>
       <li> Cloud architecture design; </li>
       <li> Serverless solutions. </li>`,
 
     "services-1-3__title": "Quality Assurance",
+    service_logo3: "./assets/customers/quality-assurance.png",
     "services-1-3__ul": `
       <li> Quality Control Consulting; </li>
       <li> Functional, Performance,
       <br> Load/Stress Testing. </li>`,
 
     "services-2-1__title": "Enterprise Software <br> </b> Development",
+    service_logo4: "./assets/customers/communication-tool.png",
     "services-2-1__ul": `
       <li>Design and development web
       <br> based/mobile business solutions;</li>
@@ -344,17 +349,23 @@ export let config = {
       Java/Scala/Grails.</li>`,
 
     "services-2-2__title": "GIS Systems",
+    service_logo5: "./assets/customers/gis.png",
+
     "services-2-2__ul": `
       <li style="margin-top:55px;">Design and development of GIS
       <br> backend and frontend solutions;</li>
       <li>On platforms: OpenLayers, Leaflet.</li>`,
 
     "services-2-3__title": "GIS Systems",
+    service_logo6: "./assets/customers/friend.png",
+
     "services-2-3__ul": `
       <li style="margin-top:55px;">Data warehousing;</li>
       <li>Big data processing.</span></li>`,
 
     "services-3-1__title": "Teach Leading and <br> Consulting",
+    service_logo7: "./assets/customers/internet-of-things.png",
+
     "services-3-1__ul": `
       <li>Consulting;</li>
       <li>Architecture design;</li>
@@ -362,6 +373,7 @@ export let config = {
       <li>Mentoring.</li>`,
 
     "services-3-2__title": "IoT Solutions",
+    service_logo8: "./assets/customers/blockchain.png",
     "services-3-2__title1": "Blockchain Solutions",
   },
 };

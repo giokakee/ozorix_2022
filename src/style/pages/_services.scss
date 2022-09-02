@@ -34,7 +34,7 @@
 .service_logo {
   width: 20px;
   height: 20px;
-  background-color: #19a79d;
+  margin-right: 10px;
 }
 
 @media (max-width: 1200px) {
@@ -103,6 +103,10 @@
 }
 
 @media (max-width: 700px) {
+  .service_logo {
+    margin-top: 25px;
+  }
+
   .flex-services {
     display: flex;
     justify-content: flex-start;
@@ -180,7 +184,6 @@
   }
 }
 
-
 .servicesSvg1 {
   position: absolute;
   pointer-events: none;
@@ -192,15 +195,13 @@
 
 .servicesSvg1 image {
   animation: serviceSvg 5s ease-in-out;
-
 }
-
 
 @keyframes serviceSvg {
   from {
     width: 0px;
   }
-  to{
+  to {
     width: auto;
   }
-  }
+}
