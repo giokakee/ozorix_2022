@@ -195,12 +195,12 @@ let sectionAnimation = () => {
     blogs
       .from(".glass", { duration: 1.5, x: -700 })
       .from(".glass1", { duration: 1.5, x: 700 }, "<")
-      .from(".blogDiv", { duration: 0.1, stagger: 0.3, y: -500, opacity: 0 })
+      .from(".blogDiv", { duration: 1.5, stagger: 0.3, y: -500, opacity: 0 })
       .from(".learnToCode", {
-        duration: 3.3,
+        duration: 1.3,
         y: 500,
         opacity: 0,
-        ease: "elastic.out(1, 0.3)",
+        ease: "elastic.out(1, 0.7)",
       });
 
     blogs.pause();

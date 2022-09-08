@@ -108,7 +108,6 @@ let ulMobile = document.querySelector(".swiper__mobile");
 config.ProjectTextData.forEach((item) => {
   let helperDiv = document.createElement("div");
   let li = document.createElement("li");
-  let projectLogo = document.createElement("img");
   let projectLeftBracket = document.createElement("img");
   let projectRightBracket = document.createElement("img");
   let visitWebsite = document.createElement("a");
@@ -121,9 +120,7 @@ config.ProjectTextData.forEach((item) => {
 
   // creating structure
   li.appendChild(helperDiv);
-  // li.appendChild(projectLogo);
   ul.appendChild(li);
-  // helperDiv.appendChild(index);
   helperDiv.appendChild(header);
 
   helperDiv.appendChild(p1);
@@ -142,11 +139,6 @@ config.ProjectTextData.forEach((item) => {
   index.src = item.index;
   index.alt = "project icon";
   headerText.innerHTML = item.name;
-  // header.innerText = item.name;
-  // index.src = "./assets/customers/quality-assurance.png";
-
-  // projectLogo.src = "./assets/customers/quality-assurance.png";
-  // projectLogo.classList.add("projectLogo");
 
   p1.innerText = item.description;
   p2.innerText = item.tech;

@@ -93,21 +93,24 @@ let leaveSection = [
     secDirection: "up",
     animation: "blogsAnim",
     method: "restart",
-  }, {
+  },
+  {
     index: 7,
     direction: "down",
     secIndex: 7,
     secDirection: "up",
     animation: "blogsAnim",
     method: "reverse",
-  }, {
+  },
+  {
     index: 7,
     direction: "down",
     secIndex: 9,
     secDirection: "up",
     animation: "contactAnim",
     method: "restart",
-  }, {
+  },
+  {
     index: 8,
     direction: "down",
     secIndex: 8,
@@ -154,7 +157,8 @@ new Swiper(".swiper-mobile__container", {
 // init full page js, and resume animations
 $("#fullPage").fullpage({
   scrollingSpeed: config.scrollSpeed,
-  normalScrollElements: ".aboutUs-body-text, .services-body__right, .swiper-mobile__container, .section__navigation .blogsArea .careersArea",
+  normalScrollElements:
+    ".aboutUs-body-text, .services-body__right, .swiper-mobile__container, .section__navigation .blogsArea .careersArea",
 
   afterLoad: function (anchorLink, index) {
     let loadedSection = $(this);
@@ -173,13 +177,13 @@ $("#fullPage").fullpage({
           sectAnim.project.resume();
           break;
         case 5:
-          sectAnim.blogs.resume();
+          scroll.customersAnim.resume();
           break;
         case 6:
           sectAnim.careers.resume();
           break;
         case 7:
-          scroll.customersAnim.resume();
+          sectAnim.blogs.resume();
           break;
         case 8:
           sectAnim.contact.resume();
@@ -190,14 +194,16 @@ $("#fullPage").fullpage({
   onLeave: function (index, nextIndex, direction) {
     let leavingSection = $(this);
     if (checkGsapActive) {
-
-      leaveSection.map(anim => {
-        if (index === anim.index && direction === anim.direction || index === anim.secIndex && direction === anim.secDirection) {
+      leaveSection.map((anim) => {
+        if (
+          (index === anim.index && direction === anim.direction) ||
+          (index === anim.secIndex && direction === anim.secDirection)
+        ) {
           scroll[anim.animation][anim.method]();
         }
       });
     }
-  }
+  },
 });
 
 $.fn.fullpage.setAllowScrolling(false);
@@ -209,16 +215,18 @@ let blogsArea = document.querySelector(".blogsArea");
 let careersArea = document.querySelector(".careersArea");
 
 function scrollThing(container) {
-  container.addEventListener("wheel", () => {
-    let aboutUsScroll = container.scrollHeight - 25 > container.clientHeight;
-    if (aboutUsScroll) {
-      $.fn.fullpage.setAllowScrolling(false);
-    } else {
-      $.fn.fullpage.setAllowScrolling(true);
-    }
-  }, false);
-
-
+  container.addEventListener(
+    "wheel",
+    () => {
+      let aboutUsScroll = container.scrollHeight - 25 > container.clientHeight;
+      if (aboutUsScroll) {
+        $.fn.fullpage.setAllowScrolling(false);
+      } else {
+        $.fn.fullpage.setAllowScrolling(true);
+      }
+    },
+    false
+  );
 
   container.addEventListener("mouseleave", () => {
     $.fn.fullpage.setAllowScrolling(true);
@@ -241,98 +249,87 @@ if (typeof window.history.replaceState === "function") {
 
 jQuery.event.special.touchstart = {
   setup: function (_, ns, handle) {
-    this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
-  }
+    this.addEventListener("touchstart", handle, {
+      passive: !ns.includes("noPreventDefault"),
+    });
+  },
 };
-
-
-
 
 /* --------
  for "read more" blogs
 ---------- */
-let blogDiv = document.querySelectorAll('.blogDiv');
+let blogDiv = document.querySelectorAll(".blogDiv");
 
-blogDiv.forEach(element => {
-  let blogBtn = element.querySelector('.blogBtn')
-  let dots = element.querySelector('.dots')
+blogDiv.forEach((element) => {
+  let blogBtn = element.querySelector(".blogBtn");
+  let dots = element.querySelector(".dots");
 
-  blogBtn.addEventListener('click', () => {
-    element.classList.toggle('readMore')
-    dots.classList.toggle('nonDisplay')
+  blogBtn.addEventListener("click", () => {
+    element.classList.toggle("readMore");
+    dots.classList.toggle("nonDisplay");
 
-    blogDiv.forEach(blogs => {
-      blogs !== element ? blogs.classList.toggle('nonDisplay') : null
-    })
+    blogDiv.forEach((blogs) => {
+      blogs !== element ? blogs.classList.toggle("nonDisplay") : null;
+    });
 
-
-    blogBtn.innerText === "Read more" ? blogBtn.innerText = "Read less" : blogBtn.innerText = "Read more"
-  })
-})
-
-
+    blogBtn.innerText === "Read more"
+      ? (blogBtn.innerText = "Read less")
+      : (blogBtn.innerText = "Read more");
+  });
+});
 
 /* --------
 Careers
 ---------- */
 
-let careerDiv = document.querySelectorAll('.careerDiv')
+let careerDiv = document.querySelectorAll(".careerDiv");
 
-careerDiv.forEach(element => {
-  let careerBtn = element.querySelector('.careerBtn');
-  let listDiv = element.querySelector('.listDiv');
-  let resumeDiv = element.querySelector('.resumeDiv');
-  let backBtn = element.querySelector('.backButton');
-  let sendBtn = element.querySelector('.sendResumeBtn');
-  let dragInput = element.querySelector('.dragInput')
-  let dragFileHere = element.querySelector('.dragFileHere');
-  let fileDiv = element.querySelector('.fileDiv')
-  let forOpacity = element.querySelector('.forOpacity')
+careerDiv.forEach((element) => {
+  let careerBtn = element.querySelector(".careerBtn");
+  let listDiv = element.querySelector(".listDiv");
+  let resumeDiv = element.querySelector(".resumeDiv");
+  let backBtn = element.querySelector(".backButton");
+  let sendBtn = element.querySelector(".sendResumeBtn");
+  let dragInput = element.querySelector(".dragInput");
+  let dragFileHere = element.querySelector(".dragFileHere");
+  let fileDiv = element.querySelector(".fileDiv");
+  let forOpacity = element.querySelector(".forOpacity");
 
+  careerBtn.addEventListener("click", () => {
+    listDiv.classList.toggle("nonDisplay");
+    resumeDiv.classList.remove("nonDisplay");
 
-  careerBtn.addEventListener('click', () => {
-    listDiv.classList.toggle("nonDisplay")
-    resumeDiv.classList.remove("nonDisplay")
+    forOpacity.style.display = "none";
+  });
 
-    forOpacity.style.display = "none"
-  })
+  backBtn.addEventListener("click", () => {
+    listDiv.classList.remove("nonDisplay");
+    resumeDiv.classList.toggle("nonDisplay");
 
-  backBtn.addEventListener('click', () => {
-    listDiv.classList.remove("nonDisplay")
-    resumeDiv.classList.toggle("nonDisplay")
+    dragFileHere.innerHTML = "Drag file here";
+    dragFileHere.style.color = "white";
+    dragInput.value = null;
+    fileDiv.style.border = "2px dashed #ffffff";
+    fileDiv.style.backgroundColor = "#131c1b";
+    forOpacity.style.display = "block";
+    forOpacity.style.opacity = "0";
+  });
 
-    dragFileHere.innerHTML = "Drag file here"
-    dragFileHere.style.color = "white"
-    dragInput.value = null
-    fileDiv.style.border = '2px dashed #ffffff'
-    fileDiv.style.backgroundColor = "#131c1b"
-    forOpacity.style.display = "block"
-    forOpacity.style.opacity = '0'
+  let data;
 
-  })
-
-
-  let data
-
-  dragInput.addEventListener('change', (e) => {
+  dragInput.addEventListener("change", (e) => {
     let fileReader = new FileReader();
-    fileReader.readAsDataURL(dragInput.files[0])
-    fileReader.addEventListener('load', (file) => {
-      data = fileReader.result
+    fileReader.readAsDataURL(dragInput.files[0]);
+    fileReader.addEventListener("load", (file) => {
+      data = fileReader.result;
 
-
-
-
-      sendBtn.addEventListener('click', () => {
-        let file = element.querySelector('.dragInput');
-        let title = element.querySelector('.title').innerHTML;
-        let mail = element.querySelector('.mailInput').value;
+      sendBtn.addEventListener("click", () => {
+        let file = element.querySelector(".dragInput");
+        let title = element.querySelector(".title").innerHTML;
+        let mail = element.querySelector(".mailInput").value;
         let message = element.querySelector(".message");
 
-
-
         if (mail && file.files.length && file.files[0].size <= 15000000) {
-
           //here is user info with file to send request for mail
           let userInfo = {
             mail: mail,
@@ -340,87 +337,78 @@ careerDiv.forEach(element => {
             attachments: [
               {
                 data: data,
-                fileName: file.files[0].name
-              }
-            ]
-          }
+                fileName: file.files[0].name,
+              },
+            ],
+          };
 
           const xhttp = new XMLHttpRequest();
 
           xhttp.onload = () => {
             console.log(xhttp.response);
-          }
+          };
           xhttp.open("POST", "http://ozorix.com/cv_send.php");
-          xhttp.setRequestHeader("Content-type", "application/json")
+          xhttp.setRequestHeader("Content-type", "application/json");
           xhttp.send(JSON.stringify(userInfo));
 
-          listDiv.classList.remove("nonDisplay")
-          resumeDiv.classList.toggle("nonDisplay")
+          listDiv.classList.remove("nonDisplay");
+          resumeDiv.classList.toggle("nonDisplay");
 
-          dragFileHere.innerHTML = "Drag file here"
-          dragFileHere.style.color = "white"
-          dragInput.value = null
-          fileDiv.style.border = '2px dashed #ffffff'
-          forOpacity.style.opacity = '0'
-          fileDiv.style.backgroundColor = "#131c1b"
+          dragFileHere.innerHTML = "Drag file here";
+          dragFileHere.style.color = "white";
+          dragInput.value = null;
+          fileDiv.style.border = "2px dashed #ffffff";
+          forOpacity.style.opacity = "0";
+          fileDiv.style.backgroundColor = "#131c1b";
 
-          message.classList.remove("nonDisplay")
+          message.classList.remove("nonDisplay");
           setTimeout(() => {
-            message.classList.add("nonDisplay")
-          }, 3000)
-          element.querySelector('.mailInput').value = ""
+            message.classList.add("nonDisplay");
+          }, 3000);
+          element.querySelector(".mailInput").value = "";
         }
-      })
-    })
-  })
-})
+      });
+    });
+  });
+});
 
+careerDiv.forEach((element) => {
+  let dragInput = element.querySelector(".dragInput");
+  let listDiv = element.querySelector(".listDiv");
+  let resumeDiv = element.querySelector(".resumeDiv");
+  let dragFileHere = element.querySelector(".dragFileHere");
+  let fileDiv = element.querySelector(".fileDiv");
+  let forOpacity = element.querySelector(".forOpacity");
 
+  dragInput.addEventListener("change", (e) => {
+    e.preventDefault();
+    listDiv.classList.add("nonDisplay");
+    resumeDiv.classList.remove("nonDisplay");
 
-careerDiv.forEach(element => {
-  let dragInput = element.querySelector('.dragInput');
-  let listDiv = element.querySelector('.listDiv');
-  let resumeDiv = element.querySelector('.resumeDiv');
-  let dragFileHere = element.querySelector('.dragFileHere');
-  let fileDiv = element.querySelector('.fileDiv')
-  let forOpacity = element.querySelector('.forOpacity')
+    let fileName = dragInput.files[0].name;
+    dragFileHere.innerHTML = fileName;
 
+    fileDiv.style.border = "1px solid";
+    forOpacity.style.opacity = "0";
+    fileDiv.style.backgroundColor = "#48bfae";
+    dragFileHere.style.color = "black";
+  });
 
-  dragInput.addEventListener('change', (e) => {
-    e.preventDefault()
-    listDiv.classList.add("nonDisplay")
-    resumeDiv.classList.remove("nonDisplay")
+  let dragInputDiv = element.querySelector(".dragInputDiv");
+  dragInputDiv.addEventListener("dragover", () => {
+    forOpacity.style.opacity = "0.7";
+    fileDiv.style.backgroundColor = "#48bfae";
+    dragFileHere.style.color = "black";
+  });
+  dragInputDiv.addEventListener("dragleave", () => {
+    forOpacity.style.opacity = "0";
 
-    let fileName = dragInput.files[0].name
-    dragFileHere.innerHTML = fileName
+    fileDiv.style.backgroundColor = "#131c1b";
+    dragFileHere.style.color = "white";
+  });
 
-    fileDiv.style.border = '1px solid'
-    forOpacity.style.opacity = '0'
-    fileDiv.style.backgroundColor = '#48bfae'
-    dragFileHere.style.color = 'black'
-  })
-
-
-  let dragInputDiv = element.querySelector('.dragInputDiv')
-  dragInputDiv.addEventListener('dragover', () => {
-    forOpacity.style.opacity = '0.7'
-    fileDiv.style.backgroundColor = "#48bfae"
-    dragFileHere.style.color = 'black'
-
-  })
-  dragInputDiv.addEventListener('dragleave', () => {
-    forOpacity.style.opacity = '0'
-
-    fileDiv.style.backgroundColor = "#131c1b"
-    dragFileHere.style.color = 'white'
-
-  })
-
-  dragInputDiv.addEventListener('drop', () => {
-    forOpacity.style.opacity = '0'
-    forOpacity.style.display = "none"
-  })
-
-
-})
-
+  dragInputDiv.addEventListener("drop", () => {
+    forOpacity.style.opacity = "0";
+    forOpacity.style.display = "none";
+  });
+});
