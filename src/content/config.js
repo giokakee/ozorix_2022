@@ -215,8 +215,8 @@ export let config = {
       tech: "Arduino/RaspberryPi/RFID, AWS IoT, NodeJS, MySQL",
     },
     {
-      index: "./assets/customers/cloud-service.png",
-      href: "google.com",
+      index: "./assets/customers/blockchain.png",
+      href: "#",
       name: "CityCom Big Data (Georgia)",
       description: "Business intelligence and data warehousing",
       tech: "AWS Kinesis, Apache Spark, Apache Hive",

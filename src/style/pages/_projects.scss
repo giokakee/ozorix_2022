@@ -75,10 +75,11 @@ left Body Area
 
   .index {
     position: relative;
-    left: -5px;
+    left: 0px;
     top: 21px;
     font-weight: 400;
     height: 48px;
+    margin-right: 10px;
   }
 
   .splide__track {
@@ -100,7 +101,7 @@ left Body Area
 
   li {
     div {
-      max-width: 400px;
+      max-width: 609px;
     }
   }
 }

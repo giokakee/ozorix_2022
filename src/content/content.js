@@ -114,15 +114,16 @@ config.ProjectTextData.forEach((item) => {
   let visitWebsite = document.createElement("a");
   let visitWebsiteWrapper = document.createElement("div");
   let index = document.createElement("img");
-  let header = document.createElement("h4");
+  let header = document.createElement("div");
+  let headerText = document.createElement("h4");
   let p1 = document.createElement("p");
   let p2 = document.createElement("p");
 
   // creating structure
   li.appendChild(helperDiv);
-  li.appendChild(projectLogo);
+  // li.appendChild(projectLogo);
   ul.appendChild(li);
-  helperDiv.appendChild(index);
+  // helperDiv.appendChild(index);
   helperDiv.appendChild(header);
 
   helperDiv.appendChild(p1);
@@ -136,9 +137,13 @@ config.ProjectTextData.forEach((item) => {
   helperDiv.appendChild(visitWebsiteWrapper);
 
   // adding value
+  header.appendChild(index);
+  header.appendChild(headerText);
   index.src = item.index;
+  index.alt = "project icon";
+  headerText.innerHTML = item.name;
+  // header.innerText = item.name;
   // index.src = "./assets/customers/quality-assurance.png";
-  header.innerText = item.name;
 
   // projectLogo.src = "./assets/customers/quality-assurance.png";
   // projectLogo.classList.add("projectLogo");
