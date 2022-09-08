@@ -94,8 +94,6 @@ servicesObj.map((service) => {
   document.querySelector(`.${service.img}`).src =
     config.servicesTextData[service.img];
 
-  console.log(config.servicesTextData[service.img], " zimbabue");
-
   document.querySelector("." + service.title).innerHTML =
     config.servicesTextData[service.title];
   if (service.ul) {
@@ -110,17 +108,19 @@ let ulMobile = document.querySelector(".swiper__mobile");
 config.ProjectTextData.forEach((item) => {
   let helperDiv = document.createElement("div");
   let li = document.createElement("li");
+  let projectLogo = document.createElement("img");
   let projectLeftBracket = document.createElement("img");
   let projectRightBracket = document.createElement("img");
   let visitWebsite = document.createElement("a");
   let visitWebsiteWrapper = document.createElement("div");
-  let index = document.createElement("p");
+  let index = document.createElement("img");
   let header = document.createElement("h4");
   let p1 = document.createElement("p");
   let p2 = document.createElement("p");
 
   // creating structure
   li.appendChild(helperDiv);
+  li.appendChild(projectLogo);
   ul.appendChild(li);
   helperDiv.appendChild(index);
   helperDiv.appendChild(header);
@@ -136,8 +136,12 @@ config.ProjectTextData.forEach((item) => {
   helperDiv.appendChild(visitWebsiteWrapper);
 
   // adding value
-  index.innerText = item.index;
+  index.src = item.index;
+  // index.src = "./assets/customers/quality-assurance.png";
   header.innerText = item.name;
+
+  // projectLogo.src = "./assets/customers/quality-assurance.png";
+  // projectLogo.classList.add("projectLogo");
 
   p1.innerText = item.description;
   p2.innerText = item.tech;

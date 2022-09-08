@@ -208,21 +208,21 @@ export let config = {
 
   ProjectTextData: [
     {
-      index: "01",
+      index: "./assets/customers/data-science.png",
       href: "#",
       name: "CityCom IoT (Georgia)",
       description: "Building automation and security system",
       tech: "Arduino/RaspberryPi/RFID, AWS IoT, NodeJS, MySQL",
     },
     {
-      index: "02",
+      index: "./assets/customers/cloud-service.png",
       href: "google.com",
       name: "CityCom Big Data (Georgia)",
       description: "Business intelligence and data warehousing",
       tech: "AWS Kinesis, Apache Spark, Apache Hive",
     },
     {
-      index: "03",
+      index: "./assets/customers/quality-assurance.png",
       href: "#",
       name: "TrackStat (USA) ",
       description:
@@ -230,28 +230,28 @@ export let config = {
       tech: "AWS Serverless API, NodeJS, .NEt/C#, MS SQL Server, Angular",
     },
     {
-      index: "04",
+      index: "./assets/customers/communication-tool.png",
       href: "#",
       name: "MyGeorgia (Georgia)",
       description: "GIS System",
       tech: "Geoserver, OpenLayers, PostGIS, MapBox Vector Tiles, AWS",
     },
     {
-      index: "05",
+      index: "./assets/customers/gis.png",
       href: "#",
       name: "CloserConnect (USA) ",
       description: "",
       tech: "AWS, MongoDB, NodeJS, ExpressJS, Angular",
     },
     {
-      index: "06",
+      index: "./assets/customers/friend.png",
       href: "#",
       name: "Wurth (Germany)",
       description: "",
       tech: ".NET/C#, ThreeJS",
     },
     {
-      index: "07",
+      index: "./assets/customers/internet-of-things.png",
       href: "#",
       name: "Siemens SpecWriter Online (USA)",
       description:
@@ -259,7 +259,7 @@ export let config = {
       tech: "AWS, MongoDB, NodeJS, ExpressJS, Angular",
     },
     {
-      index: "08",
+      index: "./assets/customers/blockchain.png",
       href: "#",
       name: "Siemens System Builder (USA)",
       description: `Online tool to assist engineers in the process of building
@@ -269,28 +269,28 @@ export let config = {
       tech: "AWS, MongoDB, NodeJS,ExpressJS, Angular",
     },
     {
-      index: "09",
+      index: "./assets/customers/blockchain.png",
       href: "#",
       name: "rek10 (USA)",
       description: "Feedback/Case management system",
       tech: "AWS, NodeJS, React",
     },
     {
-      index: "10",
+      index: "./assets/customers/blockchain.png",
       href: "#",
       name: "Trek10 KAR EDMM (USA)",
       description: "Medical imaging storage and  processing system",
       tech: "AWS S3, AS Lambda, DynamoDB",
     },
     {
-      index: "11",
+      index: "./assets/customers/blockchain.png",
       href: "#",
       name: "DocuNote (Denmark)",
       description: "Document management system",
       tech: ".NET, MS SQL Server",
     },
     {
-      index: "12",
+      index: "./assets/customers/blockchain.png",
       href: "#",
       name: "DocuLedge (Georgia)",
       description:
@@ -298,7 +298,7 @@ export let config = {
       tech: "IBM Hyperledger, Node.js, AWS S3",
     },
     {
-      index: "13",
+      index: "./assets/customers/blockchain.png",
       href: "#",
       name: "BivLab GPS (Thailand)",
       description:
@@ -306,7 +306,7 @@ export let config = {
       tech: "MapBox, OpenLayers, AWS IoT, Kinesis, DynamoDB, Grafana",
     },
     {
-      index: "14",
+      index: "./assets/customers/blockchain.png",
       href: "#",
       name: "BivLab IoT (Thailand)",
       description: `Collect data from IoT sensors on natural gas and oil
