@@ -356,7 +356,7 @@ export let config = {
       <br> backend and frontend solutions;</li>
       <li>On platforms: OpenLayers, Leaflet.</li>`,
 
-    "services-2-3__title": "GIS Systems",
+    "services-2-3__title": "Database Services",
     service_logo6: "./assets/customers/friend.png",
 
     "services-2-3__ul": `
