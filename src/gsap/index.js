@@ -33,6 +33,7 @@ let sectionAnimation = () => {
         opacity: 0,
         delay: config.aboutUs.delay,
       })
+      .from(".abVal", { duration: 1.5, stagger: 0.3, y: 500, opacity: 0 })
       .from(
         ".aboutUs-title1",
         {
@@ -44,7 +45,6 @@ let sectionAnimation = () => {
         "-=0.1"
       )
       .from(".aboutUs-right__bracket", { duration: 1, opacity: 0 }, "-=0.1")
-      .from(".abVal", { duration: 1.5, stagger: 0.3, y: 500, opacity: 0 })
       .from(".bug", { duration: 1.5, x: -500, opacity: 0 })
       .from(
         ".aboutUs-arrow",

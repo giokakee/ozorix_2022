@@ -95,6 +95,73 @@ Body Area
   .aboutUs-body-text {
     height: 68%;
   }
+
+  .aboutUs-body-text {
+    font-size: 18px;
+    color: #e6e6e6;
+    line-height: 24px;
+    font-family: NanoTech;
+    padding: 0px 44px 0px 44px;
+    max-height: 100%;
+    overflow-y: auto;
+    font-weight: 400;
+  }
+
+  .aboutUs_body_values {
+    position: absolute;
+    width: 677px;
+    height: 352px;
+    bottom: 27px;
+  }
+
+  .abVal {
+    color: white;
+    position: absolute;
+    font-family: Nanotech;
+  }
+
+  .abVal1 {
+    font-size: 25px;
+    top: 145px;
+    left: 195px;
+  }
+
+  .abVal2 {
+    right: 170px;
+    font-size: 25px;
+    top: 140px;
+  }
+  .abVal3 {
+    font-size: 15px;
+    top: 219px;
+    left: 67px;
+  }
+  .abVal4 {
+    font-size: 25px;
+    top: 188px;
+    left: 302px;
+  }
+  .abVal5 {
+    font-size: 15px;
+    bottom: 100px;
+    right: 102px;
+  }
+  .abVal6 {
+    font-size: 15px;
+    bottom: 48px;
+    left: 164px;
+  }
+  .abVal7 {
+    font-size: 25px;
+    right: 255px;
+    bottom: 30px;
+  }
+
+  .abVal8 {
+    font-size: 15px;
+    right: 60px;
+    bottom: 39px;
+  }
 }
 
 .aboutUs__image {
@@ -113,3 +180,25 @@ Body Area
     justify-content: flex-start;
   }
 }
+
+@media screen and (max-width: 570px) {
+  .aboutUs_body_values {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .aboutUs_body_values {
+    bottom: -15px;
+  }
+}
+@media screen and (max-height: 600px) {
+  .aboutUs_body_values {
+    display: none;
+  }
+}
+// @media (max-height: 800px) {
+//   .aboutUs_body_values {
+//     display: none;
+//   }
+// }
