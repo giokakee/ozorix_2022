@@ -146,9 +146,7 @@
 
 @media (max-width: 950px) {
   .home-big__img {
-    display: none;
-  }
-  .home-small__img {
+    // display: none;
     display: block;
     width: 435px;
   }
@@ -166,7 +164,7 @@
 }
 
 @media (max-width: 450px) {
-  .home-small__img {
+  .home-big__img {
     width: 300px;
   }
 }
