@@ -4,6 +4,20 @@ import { config } from "./config";
 let aboutUsText = document.querySelector(".aboutUs__text");
 aboutUsText.innerHTML = config.aboutUsTextData;
 
+let aboutUsValues = document.querySelector(".aboutUs_body_values");
+
+config.aboutUsValues.map((value, i) => {
+  let aboutUsValue = document.createElement("p");
+  aboutUsValue.classList.add(`abVal${i + 1}`);
+  aboutUsValue.classList.add(`abVal`);
+  aboutUsValue.innerHTML = value;
+
+  aboutUsValues.appendChild(aboutUsValue);
+});
+
+let abBug = document.querySelector(".bug");
+abBug.style.backgroundImage = "url(./assets/aboutus/bug.svg)";
+
 // contact content
 
 let contactObj = [

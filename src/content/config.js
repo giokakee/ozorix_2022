@@ -172,6 +172,36 @@ export let config = {
     <br /> <br /> <br />
     The 21st century is an inexhaustible source of innovative opportunities that enable us to spread our wings on a larger scale and achieve the  best results. `,
 
+  // aboutUsValues: [
+  //   {
+  //     head: [
+  //       { text: "Think big", class: "Thinkbig" },
+  //       { text: "Tackle problems head on", class: "Tackleproblemsheadon" },
+  //     ],
+  //     mid: [
+  //       { text: "Be Efficient", class: "BeEfficient" },
+  //       { text: "Earn Trust", class: "EarnTrust" },
+  //       { text: "Take responsibility", class: "Takeresponsibility" },
+  //     ],
+  //     bot: [
+  //       { text: "Be Agile", class: "BeAgile" },
+  //       { text: "Never stop", class: "Neverstop" },
+  //       { text: "Help each other", class: "Helpeachother" },
+  //     ],
+  //   },
+  // ],
+
+  aboutUsValues: [
+    "Think big",
+    "Earn Trust",
+    "Tackle problems head on",
+    "Be Agile",
+    "Help each other",
+    "Be Efficient",
+    "Never stop",
+    "Take responsibility",
+  ],
+
   contactTextData: {
     mobile: "Mobile",
     mobileInit: "+(995) 599 923 601",

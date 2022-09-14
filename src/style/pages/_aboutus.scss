@@ -7,10 +7,74 @@
   color: #e6e6e6;
   line-height: 24px;
   font-family: NanoTech;
-  padding: 0px 44px 0px 44px ;
+  padding: 0px 44px 0px 44px;
   max-height: 100%;
   overflow-y: auto;
   font-weight: 400;
+}
+
+.aboutUs_body_values {
+  position: absolute;
+  width: 752px;
+  height: 401px;
+  bottom: 27px;
+}
+
+.abVal {
+  color: white;
+  position: absolute;
+  font-family: Nanotech;
+}
+
+.abVal1 {
+  font-size: 34px;
+  top: 136px;
+  left: 201px;
+}
+
+.abVal2 {
+  right: 146px;
+  font-size: 34px;
+  top: 129px;
+}
+.abVal3 {
+  font-size: 24px;
+  top: 219px;
+  left: 0px;
+}
+.abVal4 {
+  font-size: 34px;
+  top: 188px;
+  left: 343px;
+}
+.abVal5 {
+  font-size: 24px;
+  bottom: 100px;
+  right: 62px;
+}
+.abVal6 {
+  font-size: 24px;
+  bottom: 48px;
+  left: 145px;
+}
+.abVal7 {
+  font-size: 34px;
+  right: 237px;
+  bottom: 30px;
+}
+
+.abVal8 {
+  font-size: 24px;
+  right: 0px;
+  bottom: 39px;
+}
+
+.bug {
+  width: 136px;
+  height: 121px;
+  position: absolute;
+  bottom: 15px;
+  left: 83px;
 }
 
 @media (max-width: 1200px) {
