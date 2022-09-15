@@ -15,7 +15,7 @@
 
 .aboutUs_body_values {
   position: absolute;
-  width: 752px;
+  width: 100%;
   height: 401px;
   bottom: 27px;
 }
@@ -24,49 +24,42 @@
   color: white;
   position: absolute;
   font-family: Nanotech;
+  font-size: 34px;
 }
 
 .abVal1 {
-  font-size: 34px;
   top: 136px;
-  left: 201px;
+  left: 254px;
 }
 
 .abVal2 {
-  right: 146px;
-  font-size: 34px;
+  right: 259px;
   top: 129px;
 }
 .abVal3 {
-  font-size: 24px;
   top: 219px;
-  left: 0px;
+  left: 25px;
 }
 .abVal4 {
-  font-size: 34px;
   top: 188px;
-  left: 343px;
+  left: 457px;
 }
 .abVal5 {
-  font-size: 24px;
-  bottom: 100px;
-  right: 62px;
+  bottom: 78px;
+  right: 145px;
 }
 .abVal6 {
-  font-size: 24px;
-  bottom: 48px;
-  left: 145px;
+  bottom: -5px;
+  left: 191px;
 }
 .abVal7 {
-  font-size: 34px;
-  right: 237px;
-  bottom: 30px;
+  right: 410px;
+  bottom: 3px;
 }
 
 .abVal8 {
-  font-size: 24px;
-  right: 0px;
-  bottom: 39px;
+  right: 31px;
+  bottom: -11px;
 }
 
 .bug {
@@ -197,8 +190,3 @@ Body Area
     display: none;
   }
 }
-// @media (max-height: 800px) {
-//   .aboutUs_body_values {
-//     display: none;
-//   }
-// }

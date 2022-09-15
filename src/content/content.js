@@ -1,3 +1,4 @@
+import axios from "axios";
 import { config } from "./config";
 
 // about us content
@@ -299,8 +300,9 @@ careersData.forEach((career) => {
   buttonLeftBracket.classList.add("buttonLeftBracket");
 
   let careerButton = document.createElement("button");
+
   careerButton.classList.add("careerBtn");
-  careerButton.innerHTML = "Send resume";
+  careerButton.innerHTML = "Upload CV";
 
   let buttonRightBracket = document.createElement("img");
   buttonRightBracket.src = "./assets/shared/buttonBracketRight.svg";
@@ -337,6 +339,12 @@ careersData.forEach((career) => {
   mailInput.placeholder = "Mail";
   mailDiv.appendChild(mailInput);
 
+  let mailValue;
+
+  mailInput.addEventListener("change", (e) => {
+    mailValue = e.target.value;
+  });
+
   let buttonParent = document.createElement("div");
   buttonParent.classList.add("buttonParent");
 
@@ -352,6 +360,8 @@ careersData.forEach((career) => {
   sendResumeBtn.innerHTML = "Send resume";
   sendResumeBtn.type = "submit";
   sendResumeBtn.id = `btn-${career.id}`;
+
+  sendResumeBtn.type = "submit";
 
   let buttonRightBracket1 = document.createElement("img");
   buttonRightBracket1.src = "./assets/shared/buttonBracketRight.svg";
@@ -389,6 +399,7 @@ careersData.forEach((career) => {
   resumeDiv.appendChild(buttonParent);
 
   let careerDiv = document.createElement("form");
+
   careerDiv.classList.add("careerDiv");
   careerDiv.id = career.id;
   careerDiv.method = "post";
@@ -401,8 +412,32 @@ careersData.forEach((career) => {
   let dragInput = document.createElement("input");
   dragInput.type = "file";
   dragInput.classList.add("dragInput");
+  dragInput.classList.add("nonDisplay");
+
+  careerButton.addEventListener("click", () => {
+    dragInput.classList.remove("nonDisplay");
+  });
+
+  backBtnDiv.addEventListener("click", () => {
+    dragInput.classList.add("nonDisplay");
+  });
+
   dragInput.setAttribute("name", `file-${career.id}`);
   dragInputDiv.appendChild(dragInput);
+
+  let fileToSend;
+
+  dragInput.addEventListener("change", (e) => {
+    fileToSend = e.target.files[0];
+  });
+
+  const send = (e) => {
+    e.preventDefault();
+
+    console.log({ file: fileToSend, mail: mailValue });
+  };
+
+  careerDiv.onsubmit = send;
 
   let forOpacity = document.createElement("div");
   forOpacity.classList.add("forOpacity");
