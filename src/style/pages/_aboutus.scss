@@ -16,8 +16,11 @@
 .aboutUs_body_values {
   position: absolute;
   width: 100%;
-  height: 401px;
+  height: 267px;
   bottom: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .abVal {
@@ -28,38 +31,35 @@
 }
 
 .abVal1 {
-  top: 136px;
-  left: 254px;
+  top: 9%;
+  left: 22%;
 }
 
 .abVal2 {
-  right: 259px;
-  top: 129px;
+  right: 24%;
+  top: 3%;
 }
 .abVal3 {
-  top: 219px;
-  left: 25px;
+  top: 39%;
+  left: 3%;
 }
-.abVal4 {
-  top: 188px;
-  left: 457px;
-}
+
 .abVal5 {
-  bottom: 78px;
-  right: 145px;
+  bottom: 21%;
+  right: 13%;
 }
 .abVal6 {
-  bottom: -5px;
-  left: 191px;
+  bottom: -7%;
+  left: 20%;
 }
 .abVal7 {
-  right: 410px;
-  bottom: 3px;
+  right: 39%;
+  bottom: -3%;
 }
 
 .abVal8 {
-  right: 31px;
-  bottom: -11px;
+  right: 4%;
+  bottom: -10%;
 }
 
 .bug {
@@ -103,57 +103,50 @@ Body Area
   .aboutUs_body_values {
     position: absolute;
     width: 677px;
-    height: 352px;
+    height: 211px;
     bottom: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .abVal {
     color: white;
     position: absolute;
     font-family: Nanotech;
+    font-size: 25px;
   }
 
   .abVal1 {
-    font-size: 25px;
-    top: 145px;
-    left: 195px;
+    top: 12%;
+    left: 18%;
   }
 
   .abVal2 {
-    right: 170px;
-    font-size: 25px;
-    top: 140px;
+    right: 20%;
+    top: 9%;
   }
   .abVal3 {
-    font-size: 15px;
-    top: 219px;
-    left: 67px;
+    top: 47%;
+    left: -5%;
   }
-  .abVal4 {
-    font-size: 25px;
-    top: 188px;
-    left: 302px;
-  }
+
   .abVal5 {
-    font-size: 15px;
-    bottom: 100px;
-    right: 102px;
+    bottom: 19%;
+    right: 5%;
   }
   .abVal6 {
-    font-size: 15px;
-    bottom: 48px;
-    left: 164px;
+    bottom: -15%;
+    left: 13%;
   }
   .abVal7 {
-    font-size: 25px;
-    right: 255px;
-    bottom: 30px;
+    right: 38%;
+    bottom: -2%;
   }
 
   .abVal8 {
-    font-size: 15px;
-    right: 60px;
-    bottom: 39px;
+    right: -6%;
+    bottom: -16%;
   }
 }
 

@@ -29,12 +29,12 @@ let sectionAnimation = () => {
     let aboutUs = gsap.timeline({ defaults: { opacity: 0, ease: "back" } });
 
     aboutUs
+      .from(".abVal", { duration: 1.5, stagger: 0.3, y: 500, opacity: 0 })
       .from(".aboutUs-left__bracket", {
         duration: 1,
         opacity: 0,
         delay: config.aboutUs.delay,
       })
-      .from(".abVal", { duration: 1.5, stagger: 0.3, y: 500, opacity: 0 })
       .from(
         ".aboutUs-title1",
         {
