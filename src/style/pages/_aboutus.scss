@@ -27,7 +27,7 @@
   color: white;
   position: absolute;
   font-family: Nanotech;
-  font-size: 34px;
+  font-size: 3rem;
 }
 
 .abVal1 {
@@ -70,9 +70,65 @@
   left: 83px;
 }
 
+@media (max-width: 1700px) {
+  .abVal {
+    color: white;
+    position: absolute;
+    font-family: Nanotech;
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1500px) {
+  .abVal {
+    color: white;
+    position: absolute;
+    font-family: Nanotech;
+    font-size: 3.3rem;
+  }
+
+  .abVal1 {
+    top: 28%;
+    left: 22%;
+  }
+
+  .abVal2 {
+    right: 27%;
+    top: 22%;
+  }
+  .abVal3 {
+    top: 47%;
+    left: 5%;
+  }
+
+  .abVal5 {
+    bottom: 26%;
+    right: 13%;
+  }
+  .abVal6 {
+    bottom: 2%;
+    left: 21%;
+  }
+  .abVal7 {
+    right: 38%;
+    bottom: 7%;
+  }
+
+  .abVal8 {
+    right: 4%;
+    bottom: -2%;
+  }
+}
+
 @media (max-width: 1200px) {
   .aboutUs-body-text {
     font-size: 2rem;
+  }
+  .abVal {
+    color: white;
+    position: absolute;
+    font-family: Nanotech;
+    font-size: 4rem;
   }
 }
 
@@ -114,7 +170,7 @@ Body Area
     color: white;
     position: absolute;
     font-family: Nanotech;
-    font-size: 25px;
+    font-size: 4rem;
   }
 
   .abVal1 {
@@ -166,8 +222,7 @@ Body Area
     justify-content: flex-start;
   }
 }
-
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 800px) {
   .aboutUs_body_values {
     display: none;
   }

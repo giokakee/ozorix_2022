@@ -1,4 +1,3 @@
-import axios from "axios";
 import { config } from "./config";
 
 // about us content
@@ -159,6 +158,7 @@ config.ProjectTextData.forEach((item) => {
   p2.innerText = item.tech;
   visitWebsite.innerText = "Visit Website";
   visitWebsite.setAttribute("href", item.href);
+  visitWebsite.setAttribute("target", "_blank");
   li.classList.add("swiper-slide");
   p2.classList.add("footer");
   index.classList.add("index");
@@ -218,7 +218,7 @@ document
 let blogsArea = document.querySelector(".blogsArea");
 let { blogData } = config;
 
-blogData.forEach((blogData) => {
+blogData.forEach((blogData, i) => {
   let blogsDiv = document.createElement("div");
   blogsDiv.classList.add("blogDiv");
 
@@ -228,7 +228,7 @@ blogData.forEach((blogData) => {
 
   let blog = document.createElement("p");
   blog.classList.add("blog");
-  blog.innerHTML = blogData.text;
+  blog.innerHTML = blogData.text.slice(0, 350);
 
   let dots = document.createElement("span");
   dots.classList.add("dots");
@@ -237,7 +237,7 @@ blogData.forEach((blogData) => {
 
   let moreText = document.createElement("span");
   moreText.classList.add("moreText");
-  moreText.innerHTML = blogData.moreText;
+  moreText.innerHTML = blogData.text;
   blog.appendChild(moreText);
 
   let buttonDiv = document.createElement("div");
@@ -336,14 +336,16 @@ careersData.forEach((career) => {
 
   let mailInput = document.createElement("input");
   mailInput.classList.add("mailInput");
-  mailInput.placeholder = "Mail";
+  mailInput.setAttribute("required", "");
+  mailInput.placeholder = "Email";
+
+  let errorMEssage = document.createElement("p");
+  errorMEssage.innerHTML = "*Please provide a Email address!";
+  errorMEssage.classList.add("mailErrorMesage");
+  errorMEssage.classList.add("nonDisplay");
+
   mailDiv.appendChild(mailInput);
-
-  let mailValue;
-
-  mailInput.addEventListener("change", (e) => {
-    mailValue = e.target.value;
-  });
+  mailDiv.appendChild(errorMEssage);
 
   let buttonParent = document.createElement("div");
   buttonParent.classList.add("buttonParent");
@@ -357,7 +359,7 @@ careersData.forEach((career) => {
 
   let sendResumeBtn = document.createElement("button");
   sendResumeBtn.classList.add("sendResumeBtn");
-  sendResumeBtn.innerHTML = "Send resume";
+  sendResumeBtn.innerHTML = "Send CV";
   sendResumeBtn.type = "submit";
   sendResumeBtn.id = `btn-${career.id}`;
 
@@ -398,13 +400,13 @@ careersData.forEach((career) => {
   resumeDiv.appendChild(mailDiv);
   resumeDiv.appendChild(buttonParent);
 
-  let careerDiv = document.createElement("form");
+  let careerDiv = document.createElement("div");
 
   careerDiv.classList.add("careerDiv");
   careerDiv.id = career.id;
-  careerDiv.method = "post";
-  careerDiv.action = "http://ozorix.com/cv_send.php";
-  careerDiv.enctype = "multipart/form-data";
+  // careerDiv.method = "post";
+  // careerDiv.action = "http://ozorix.com/cv_send.php";
+  // careerDiv.enctype = "multipart/form-data";
 
   let dragInputDiv = document.createElement("div");
   dragInputDiv.classList.add("dragInputDiv");

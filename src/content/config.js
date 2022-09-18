@@ -35,32 +35,18 @@ export let config = {
   },
 
   socialLinks: {
-    facebook: "https://www.facebook.com",
-    linkedin: "https://www.linkedin.com",
+    facebook: "https://www.facebook.com/ozorix/",
+    linkedin: "https://www.linkedin.com/company/ozorix-inc-/",
   },
 
   blogData: [
     {
       title: "Lorem ipsum 1",
       text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis excepturi perspiciatis laborum, veniam nam earum debitis eius delectus impedit voluptatem. Ratione totam pariatur veritatis quasi officia? Rerum, architecto? Quisquam qui molestiae cupiditate assumenda totam doloribus repudiandae, minima ab`,
-      moreText: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada
-      nunc vel risus commodo viverra maecenas accumsan. Habitant morbi
-      tristique senectus et netus et. Duis convallis convallis tellus id
-      interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi
-      non arcu. Lacus vestibulum sed arcu`,
     },
     {
       title: "Lorem ipsum 2",
       text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada
-             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi
-             tristique senectus et netus et. Duis convallis convallis tellus id
-             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi
-             non arcu. Lacus vestibulum sed arcu`,
-      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
              Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada
              nunc vel risus commodo viverra maecenas accumsan. Habitant morbi
@@ -77,13 +63,6 @@ export let config = {
              tristique senectus et netus et. Duis convallis convallis tellus id
              interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi
              non arcu. Lacus vestibulum sed arcu`,
-      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada
-             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi
-             tristique senectus et netus et. Duis convallis convallis tellus id
-             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi
-             non arcu. Lacus vestibulum sed arcu`,
     },
     {
       title: "Lorem ipsum4",
@@ -94,7 +73,34 @@ export let config = {
              tristique senectus et netus et. Duis convallis convallis tellus id
              interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi
              non arcu. Lacus vestibulum sed arcu`,
-      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    },
+    {
+      title: "Lorem ipsum5",
+      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada
+             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi
+             tristique senectus et netus et. Duis convallis convallis tellus id
+             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi
+             non arcu. Lacus vestibulum sed arcu Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada
+             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi
+             tristique senectus et netus et. Duis convallis convallis tellus id
+             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi
+             non arcu. Lacus vestibulum sed arcuLorem ipsum dolor sit amet, consectetur adipiscing elit,
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada
+             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi
+             tristique senectus et netus et. Duis convallis convallis tellus id
+             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi
+             non arcu. Lacus vestibulum sed arcuLorem ipsum dolor sit amet, consectetur adipiscing elit,
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada
+             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi
+             tristique senectus et netus et. Duis convallis convallis tellus id
+             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi
+             non arcu. Lacus vestibulum sed arcuLorem ipsum dolor sit amet, consectetur adipiscing elit,
              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
              Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada
              nunc vel risus commodo viverra maecenas accumsan. Habitant morbi
@@ -103,32 +109,26 @@ export let config = {
              non arcu. Lacus vestibulum sed arcu`,
     },
     {
-      title: "Lorem ipsum",
+      title: "Lorem ipsum6",
       text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
              Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada
              nunc vel risus commodo viverra maecenas accumsan. Habitant morbi
              tristique senectus et netus et. Duis convallis convallis tellus id
              interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi
-             non arcu. Lacus vestibulum sed arcu`,
-      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+             non arcu. Lacus vestibulum sed arcu Lorem ipsum dolor sit amet, consectetur adipiscing elit,
              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
              Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada
              nunc vel risus commodo viverra maecenas accumsan. Habitant morbi
              tristique senectus et netus et. Duis convallis convallis tellus id
              interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi
-             non arcu. Lacus vestibulum sed arcu`,
-    },
-    {
-      title: "Lorem ipsum",
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+             non arcu. Lacus vestibulum sed arcuLorem ipsum dolor sit amet, consectetur adipiscing elit,
              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
              Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada
              nunc vel risus commodo viverra maecenas accumsan. Habitant morbi
              tristique senectus et netus et. Duis convallis convallis tellus id
              interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi
-             non arcu. Lacus vestibulum sed arcu`,
-      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+             non arcu. Lacus vestibulum sed arcuLorem ipsum dolor sit amet, consectetur adipiscing elit,
              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
              Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada
              nunc vel risus commodo viverra maecenas accumsan. Habitant morbi
@@ -172,25 +172,6 @@ export let config = {
     <br /> <br /> <br />
     The 21st century is an inexhaustible source of innovative opportunities that enable us to spread our wings on a larger scale and achieve the  best results. `,
 
-  // aboutUsValues: [
-  //   {
-  //     head: [
-  //       { text: "Think big", class: "Thinkbig" },
-  //       { text: "Tackle problems head on", class: "Tackleproblemsheadon" },
-  //     ],
-  //     mid: [
-  //       { text: "Be Efficient", class: "BeEfficient" },
-  //       { text: "Earn Trust", class: "EarnTrust" },
-  //       { text: "Take responsibility", class: "Takeresponsibility" },
-  //     ],
-  //     bot: [
-  //       { text: "Be Agile", class: "BeAgile" },
-  //       { text: "Never stop", class: "Neverstop" },
-  //       { text: "Help each other", class: "Helpeachother" },
-  //     ],
-  //   },
-  // ],
-
   aboutUsValues: [
     "Think big",
     "Earn Trust",
@@ -216,44 +197,44 @@ export let config = {
   customersTextData: {
     "customers-1-1": "./assets/customers/data-science.png",
     "customers-1-1Href": "#",
-    "customers-1-2": "./assets/customers/007-blockchain.png",
+    "customers-1-2": "./assets/customers/blockchain.png",
     "customers-1-2Href": "#",
-    "customers-1-3": "./assets/customers/001-data-science.png",
+    "customers-1-3": "./assets/customers/quality-assurance.png",
     "customers-1-3Href": "#",
-    "customers-2-1": "./assets/customers/001-data-science.png",
+    "customers-2-1": "./assets/customers/communication-tool.png",
     "customers-2-1Href": "#",
-    "customers-2-2": "./assets/customers/001-data-science.png",
+    "customers-2-2": "./assets/customers/gis.png",
     "customers-2-2Href": "#",
-    "customers-2-3": "./assets/customers/001-data-science.png",
+    "customers-2-3": "./assets/customers/friend.png",
     "customers-2-3Href": "#",
-    "customers-3-1": "./assets/customers/001-data-science.png",
+    "customers-3-1": "./assets/customers/internet-of-things.png",
     "customers-3-1Href": "#",
-    "customers-3-2": "./assets/customers/001-data-science.png",
+    "customers-3-2": "./assets/customers/blockchain.png",
     "customers-3-2Href": "#",
-    "customers-3-3": "./assets/customers/001-data-science.png",
+    "customers-3-3": "./assets/customers/blockchain.png",
     "customers-3-3Href": "#",
-    "customers-4-1": "./assets/customers/001-data-science.png",
+    "customers-4-1": "./assets/customers/blockchain.png",
     "customers-4-1Href": "#",
   },
 
   ProjectTextData: [
     {
       index: "./assets/customers/data-science.png",
-      href: "#",
+      href: "https://www.facebook.com",
       name: "CityCom IoT (Georgia)",
       description: "Building automation and security system",
       tech: "Arduino/RaspberryPi/RFID, AWS IoT, NodeJS, MySQL",
     },
     {
       index: "./assets/customers/blockchain.png",
-      href: "#",
+      href: "https://www.facebook.com",
       name: "CityCom Big Data (Georgia)",
       description: "Business intelligence and data warehousing",
       tech: "AWS Kinesis, Apache Spark, Apache Hive",
     },
     {
       index: "./assets/customers/quality-assurance.png",
-      href: "#",
+      href: "https://www.facebook.com",
       name: "TrackStat (USA) ",
       description:
         "Electronic patient record management, CRM, messaging, Scheduling and business intelligence.",
@@ -261,28 +242,28 @@ export let config = {
     },
     {
       index: "./assets/customers/communication-tool.png",
-      href: "#",
+      href: "https://www.facebook.com",
       name: "MyGeorgia (Georgia)",
       description: "GIS System",
       tech: "Geoserver, OpenLayers, PostGIS, MapBox Vector Tiles, AWS",
     },
     {
       index: "./assets/customers/gis.png",
-      href: "#",
+      href: "https://www.facebook.com",
       name: "CloserConnect (USA) ",
       description: "",
       tech: "AWS, MongoDB, NodeJS, ExpressJS, Angular",
     },
     {
       index: "./assets/customers/friend.png",
-      href: "#",
+      href: "https://www.facebook.com",
       name: "Wurth (Germany)",
       description: "",
       tech: ".NET/C#, ThreeJS",
     },
     {
       index: "./assets/customers/internet-of-things.png",
-      href: "#",
+      href: "https://www.facebook.com",
       name: "Siemens SpecWriter Online (USA)",
       description:
         "Online tool to assist engineers in the process of building a fire safety and building automation systems",
@@ -290,7 +271,7 @@ export let config = {
     },
     {
       index: "./assets/customers/blockchain.png",
-      href: "#",
+      href: "https://www.facebook.com",
       name: "Siemens System Builder (USA)",
       description: `Online tool to assist engineers in the process of building
       a fire safety and building automation
@@ -300,28 +281,28 @@ export let config = {
     },
     {
       index: "./assets/customers/blockchain.png",
-      href: "#",
+      href: "https://www.facebook.com",
       name: "rek10 (USA)",
       description: "Feedback/Case management system",
       tech: "AWS, NodeJS, React",
     },
     {
       index: "./assets/customers/blockchain.png",
-      href: "#",
+      href: "https://www.facebook.com",
       name: "Trek10 KAR EDMM (USA)",
       description: "Medical imaging storage and  processing system",
       tech: "AWS S3, AS Lambda, DynamoDB",
     },
     {
       index: "./assets/customers/blockchain.png",
-      href: "#",
+      href: "https://www.facebook.com",
       name: "DocuNote (Denmark)",
       description: "Document management system",
       tech: ".NET, MS SQL Server",
     },
     {
       index: "./assets/customers/blockchain.png",
-      href: "#",
+      href: "https://www.facebook.com",
       name: "DocuLedge (Georgia)",
       description:
         "Document verification application based on Blockchain smartcontracts technologies",
@@ -329,7 +310,7 @@ export let config = {
     },
     {
       index: "./assets/customers/blockchain.png",
-      href: "#",
+      href: "https://www.facebook.com",
       name: "BivLab GPS (Thailand)",
       description:
         "GPS Tracking system to collect data from vehicles and display on GIS dashboard",
@@ -337,7 +318,7 @@ export let config = {
     },
     {
       index: "./assets/customers/blockchain.png",
-      href: "#",
+      href: "https://www.facebook.com",
       name: "BivLab IoT (Thailand)",
       description: `Collect data from IoT sensors on natural gas and oil
       production sites, run collected data through physical

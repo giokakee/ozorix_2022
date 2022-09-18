@@ -172,6 +172,7 @@ input[type="text"] {
   .careerDiv {
     align-items: center;
     padding: 15px 0px 10% 0px;
+    height: 470px;
   }
 
   .resumeDiv {
@@ -257,4 +258,17 @@ input[type="text"] {
   left: 0px;
   top: 0px;
   transition: 0.5s;
+}
+
+.errorMail {
+  border: 1px solid red;
+}
+
+.mailErrorMesage {
+  color: red;
+  position: absolute;
+}
+
+.hideX {
+  overflow-x: hidden;
 }

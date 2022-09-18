@@ -264,12 +264,15 @@ blogDiv.forEach((element) => {
   let blogBtn = element.querySelector(".blogBtn");
   let dots = element.querySelector(".dots");
 
-  blogBtn.addEventListener("click", () => {
+  blogBtn.addEventListener("click", (e) => {
     element.classList.toggle("readMore");
     dots.classList.toggle("nonDisplay");
+    blogsArea.classList.toggle("oneBlogArea");
 
-    blogDiv.forEach((blogs) => {
-      blogs !== element ? blogs.classList.toggle("nonDisplay") : null;
+    blogDiv.forEach((blog) => {
+      blog !== element && blog.classList.toggle("nonDisplay");
+
+      blogsArea.scrollTo({ top: 0 });
     });
 
     blogBtn.innerText === "Read more"
@@ -294,12 +297,17 @@ careerDiv.forEach((element) => {
   let dragFileHere = element.querySelector(".dragFileHere");
   let fileDiv = element.querySelector(".fileDiv");
   let forOpacity = element.querySelector(".forOpacity");
+  let mail = element.querySelector(".mailInput");
 
   careerBtn.addEventListener("click", () => {
     listDiv.classList.toggle("nonDisplay");
     resumeDiv.classList.remove("nonDisplay");
 
     forOpacity.style.display = "none";
+  });
+
+  mail.addEventListener("change", (e) => {
+    mail.classList.remove("errorMail");
   });
 
   backBtn.addEventListener("click", () => {
@@ -326,41 +334,20 @@ careerDiv.forEach((element) => {
       sendBtn.addEventListener("click", () => {
         let file = element.querySelector(".dragInput");
         let title = element.querySelector(".title").innerHTML;
-        let mail = element.querySelector(".mailInput").value;
         let message = element.querySelector(".message");
-
-        if (mail && file.files.length && file.files[0].size <= 15000000) {
+        if (mail.value && file.files.length && file.files[0].size <= 15000000) {
           //here is user info with file to send request for mail
-          let userInfo = {
-            mail: mail,
-            title: title,
-            attachments: [
-              {
-                data: data,
-                fileName: file.files[0].name,
-              },
-            ],
-          };
 
-          const xhttp = new XMLHttpRequest();
-
-          xhttp.onload = () => {
-            console.log(xhttp.response);
-          };
-          xhttp.open("POST", "http://ozorix.com/cv_send.php");
-          xhttp.setRequestHeader("Content-type", "application/json");
-          xhttp.send(JSON.stringify(userInfo));
+          console.log({ file: data, email: mail.value, title });
 
           listDiv.classList.remove("nonDisplay");
           resumeDiv.classList.toggle("nonDisplay");
-
           dragFileHere.innerHTML = "Drag file here";
           dragFileHere.style.color = "white";
           dragInput.value = null;
           fileDiv.style.border = "2px dashed #ffffff";
           forOpacity.style.opacity = "0";
           fileDiv.style.backgroundColor = "#131c1b";
-
           message.classList.remove("nonDisplay");
           setTimeout(() => {
             message.classList.add("nonDisplay");
@@ -369,6 +356,15 @@ careerDiv.forEach((element) => {
         }
       });
     });
+  });
+  let mailErrorMesage = element.querySelector(".mailErrorMesage");
+  sendBtn.addEventListener("click", () => {
+    !mail.value
+      ? mailErrorMesage.classList.remove("nonDisplay")
+      : mailErrorMesage.classList.add("nonDisplay");
+    setTimeout(() => {
+      mailErrorMesage.classList.add("nonDisplay");
+    }, 2000);
   });
 });
 
