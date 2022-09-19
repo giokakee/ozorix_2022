@@ -260,6 +260,15 @@ jQuery.event.special.touchstart = {
 ---------- */
 let blogDiv = document.querySelectorAll(".blogDiv");
 
+let positionY;
+let positionX;
+
+blogsArea.addEventListener("scroll", () => {
+  let oneBlogArea = document.querySelector(".oneBlogArea");
+  !oneBlogArea && (positionY = $(".blogsArea").scrollTop());
+  !oneBlogArea && (positionX = $(".blogsArea").scrollLeft());
+});
+
 blogDiv.forEach((element) => {
   let blogBtn = element.querySelector(".blogBtn");
   let dots = element.querySelector(".dots");
@@ -271,8 +280,16 @@ blogDiv.forEach((element) => {
 
     blogDiv.forEach((blog) => {
       blog !== element && blog.classList.toggle("nonDisplay");
+      let oneBlogArea = document.querySelector(".oneBlogArea");
 
-      blogsArea.scrollTo({ top: 0 });
+      console.log(positionY);
+      screen.width > 1000
+        ? oneBlogArea
+          ? blogsArea.scrollTo({ top: 0 })
+          : blogsArea.scrollTo({ top: positionY || 0 })
+        : oneBlogArea
+        ? blogsArea.scrollTo({ top: 0 })
+        : blogsArea.scrollTo({ left: positionX || 0 });
     });
 
     blogBtn.innerText === "Read more"
