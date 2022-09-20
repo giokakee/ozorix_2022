@@ -340,7 +340,7 @@ careersData.forEach((career) => {
   mailInput.placeholder = "Email";
 
   let errorMEssage = document.createElement("p");
-  errorMEssage.innerHTML = "*Please provide a Email address!";
+  errorMEssage.innerHTML = "*Please provide an Email address!";
   errorMEssage.classList.add("mailErrorMesage");
   errorMEssage.classList.add("nonDisplay");
 
