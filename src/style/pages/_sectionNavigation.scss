@@ -30,7 +30,7 @@
 .section__navigation-close p {
   font-size: 18px;
   color: #e6e6e6;
-  font-family: RailGrotesk;
+  font-family: NeueMachina;
 }
 
 .section__navigation-close {
@@ -42,7 +42,6 @@
 .section__navigation-body {
   display: flex !important;
   justify-content: center;
-  align-items: center;
   ul {
     // display: flex;
     // flex-direction: column;
@@ -110,20 +109,23 @@
 
   display: table;
   margin: 0 auto;
+  overflow: hidden;
 
   ul {
-    height: 65vh;
+    height: 83vh;
     overflow-y: auto;
 
     li {
-      margin-top: 51px;
-      margin-left: 51px;
+      margin-bottom: 32px;
+      height: 61px;
+      display: flex;
+      align-items: center;
     }
   }
 
   // links
   a {
-    font-family: railGrotesk;
+    font-family: NeueMachina;
     text-decoration: none;
   }
 }

@@ -16,7 +16,7 @@
 .header__title {
   h2 {
     font-size: 41px;
-    font-family: RailGrotesk;
+    font-family: NeueMachina;
     color: #e6e6e6;
     margin: 0px 13px 0px 13px;
   }
@@ -26,19 +26,19 @@
   cursor: pointer;
   h2 {
     font-size: 28px;
-    font-family: RailGrotesk;
+    font-family: NeueMachina;
     color: #e6e6e6;
   }
 }
 
 @media (max-width: 1200px) {
- .header__title{
-   position: absolute;
-   width: 100%;
-   align-items: center;
-   justify-content: center;
-   left: 0px;
- }
+  .header__title {
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    left: 0px;
+  }
 }
 
 @media (max-width: 1600px) {
@@ -60,7 +60,7 @@
   align-items: center;
 }
 
-.header__right--content{
+.header__right--content {
   padding-left: 44px;
 }
 
