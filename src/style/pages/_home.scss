@@ -179,6 +179,18 @@
   }
 }
 
+@media (max-width: 400px) {
+  .home-big__img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 300px) {
+  .home-big__img {
+    width: 280px;
+  }
+}
+
 .home-hover,
 .aboutUs-hover,
 .services-hover,

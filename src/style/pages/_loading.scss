@@ -117,7 +117,7 @@
   left: 40px;
   -webkit-animation: moveOzorix 3s ease-in-out forwards,
     fadeOzorix 4.3s ease-in-out forwards;
-  animation: moveOzorix 2.5s ease-in-out forwards,
+  animation: moveOzorix 2.6s ease-in-out forwards,
     fadeOzorix 4.3s ease-in-out forwards;
 }
 
@@ -300,13 +300,13 @@
     }
   }
   .loading__logo-right {
-    -webkit-animation: moveLogo 5.7s ease-in-out forwards;
-    animation: moveLogo 5.7s ease-in-out forwards;
+    -webkit-animation: moveLogo 5.3s ease-in-out forwards;
+    animation: moveLogo 5.3s ease-in-out forwards;
   }
 
   .loading__logo-left {
-    -webkit-animation: moveLogo1 5.7s ease-in-out forwards;
-    animation: moveLogo1 5.7s ease-in-out forwards;
+    -webkit-animation: moveLogo1 5.3s ease-in-out forwards;
+    animation: moveLogo1 5.3s ease-in-out forwards;
   }
   .loading__ozorix {
     width: 150px;
