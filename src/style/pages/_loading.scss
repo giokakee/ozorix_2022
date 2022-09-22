@@ -39,12 +39,12 @@
   top: 1.5rem;
   left: -1.6rem;
   -webkit-animation: moveLogo 4.5s ease-in-out forwards;
-  animation: moveLogo 4.9s ease-in-out forwards;
+  animation: moveLogo 4.3s ease-in-out forwards;
 }
 
 .loading__logo-left {
   -webkit-animation: moveLogo1 4.5s ease-in-out forwards;
-  animation: moveLogo1 4.9s ease-in-out forwards;
+  animation: moveLogo1 4.3s ease-in-out forwards;
 }
 
 .loading__ozorix1 {
@@ -116,9 +116,9 @@
   top: 50px;
   left: 40px;
   -webkit-animation: moveOzorix 3s ease-in-out forwards,
-    fadeOzorix 5s ease-in-out forwards;
-  animation: moveOzorix 2.7s ease-in-out forwards,
-    fadeOzorix 5s ease-in-out forwards;
+    fadeOzorix 4.3s ease-in-out forwards;
+  animation: moveOzorix 2.5s ease-in-out forwards,
+    fadeOzorix 4.3s ease-in-out forwards;
 }
 
 @-webkit-keyframes fadeOzorix {

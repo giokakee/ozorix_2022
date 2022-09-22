@@ -175,7 +175,7 @@ export let config = {
   aboutUsValues: [
     "Think big",
     "Earn Trust",
-    "Tackle problems head on",
+    "Tackle problems",
     "Be Agile",
     "Help each other",
     "Be Efficient",
