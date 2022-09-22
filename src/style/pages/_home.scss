@@ -152,7 +152,7 @@
   .home-big__img {
     // display: none;
     display: block;
-    width: 435px;
+    width: 600px;
   }
 }
 
@@ -165,11 +165,17 @@
       }
     }
   }
+
+  .home-big__img {
+    // display: none;
+    display: block;
+    width: 445px;
+  }
 }
 
 @media (max-width: 450px) {
   .home-big__img {
-    width: 300px;
+    width: 380px;
   }
 }
 
