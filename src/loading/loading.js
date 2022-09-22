@@ -158,7 +158,7 @@ new Swiper(".swiper-mobile__container", {
 $("#fullPage").fullpage({
   scrollingSpeed: config.scrollSpeed,
   normalScrollElements:
-    ".aboutUs-body-text, .services-body__right, .swiper-mobile__container, .section__navigation .blogsArea .careersArea",
+    ".aboutUs-body-text, .services-body__right, .swiper-mobile__container, .section__navigation, .blogsArea, .careersArea, .customers__names",
 
   afterLoad: function (anchorLink, index) {
     let loadedSection = $(this);

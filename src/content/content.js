@@ -177,12 +177,23 @@ config.ProjectTextData.forEach((item) => {
   let headerSpanMobile = document.createElement("span");
   let p1mobile = document.createElement("p");
   let p2mobile = document.createElement("p");
+  let mhelperHeaderDiv = document.createElement("div");
+
+  let mIndex = document.createElement("img");
+
+  mIndex.src = item.index;
+  mIndex.alt = "project icon";
+  mIndex.classList.add("mIndex");
+  mhelperHeaderDiv.classList.add("projectMobileHeaderDiv");
+
+  mhelperHeaderDiv.appendChild(mIndex);
+  mhelperHeaderDiv.appendChild(headerMobile);
 
   liMobile.appendChild(mHelperDiv);
   ulMobile.appendChild(liMobile);
-  mHelperDiv.appendChild(headerMobile);
+  mHelperDiv.appendChild(mhelperHeaderDiv);
   mHelperDiv.appendChild(header2mobile);
-  mHelperDiv.appendChild(headerSpanMobile);
+  // mHelperDiv.appendChild(headerSpanMobile);
   mHelperDiv.appendChild(p1mobile);
   mHelperDiv.appendChild(p2mobile);
   mHelperDiv.appendChild(projectRightBracketMobile);

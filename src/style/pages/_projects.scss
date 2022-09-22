@@ -31,6 +31,16 @@ left Body Area
   }
 }
 
+.projectMobileHeaderDiv {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 10px;
+    height: 35px;
+  }
+}
+
 /* ---------
   splide
  ----------*/
