@@ -222,6 +222,7 @@ function scrollThing(container) {
       let aboutUsScroll =
         container.clientHeight + $(container).scrollTop() ==
         container.scrollHeight;
+      console.log("wheel eventlistener");
 
       if (aboutUsScroll && e.deltaY > 0) {
         $.fn.fullpage.setAllowScrolling(true);
