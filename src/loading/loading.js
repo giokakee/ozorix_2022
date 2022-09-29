@@ -193,6 +193,7 @@ $("#fullPage").fullpage({
 
   onLeave: function (index, nextIndex, direction) {
     let leavingSection = $(this);
+
     if (checkGsapActive) {
       leaveSection.map((anim) => {
         if (
@@ -208,20 +209,27 @@ $("#fullPage").fullpage({
 
 $.fn.fullpage.setAllowScrolling(false);
 
-document.querySelector(".customers__names");
 let servicesDiv = document.querySelector(".services-body__right");
 let aboutUsDiv = document.querySelector(".aboutUs-body-text");
 let blogsArea = document.querySelector(".blogsArea");
 let careersArea = document.querySelector(".careersArea");
+let customers = document.querySelector(".customers__names");
 
 function scrollThing(container) {
   container.addEventListener(
     "wheel",
-    () => {
-      let aboutUsScroll = container.scrollHeight - 25 > container.clientHeight;
-      if (aboutUsScroll) {
-        $.fn.fullpage.setAllowScrolling(false);
+    (e) => {
+      let aboutUsScroll =
+        container.clientHeight + $(container).scrollTop() ==
+        container.scrollHeight;
+
+      if (aboutUsScroll && e.deltaY > 0) {
+        $.fn.fullpage.setAllowScrolling(true);
       } else {
+        $.fn.fullpage.setAllowScrolling(false);
+      }
+
+      if ($(container).scrollTop() < 1 && e.deltaY < 0) {
         $.fn.fullpage.setAllowScrolling(true);
       }
     },
@@ -236,6 +244,7 @@ scrollThing(aboutUsDiv);
 scrollThing(servicesDiv);
 scrollThing(blogsArea);
 scrollThing(careersArea);
+scrollThing(customers);
 
 /* --------
  clear website url before refresh
@@ -282,7 +291,6 @@ blogDiv.forEach((element) => {
       blog !== element && blog.classList.toggle("nonDisplay");
       let oneBlogArea = document.querySelector(".oneBlogArea");
 
-      console.log(positionY);
       screen.width > 1000
         ? oneBlogArea
           ? blogsArea.scrollTo({ top: 0 })

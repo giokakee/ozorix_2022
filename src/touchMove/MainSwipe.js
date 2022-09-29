@@ -208,16 +208,16 @@ function handleTouchMove3(evt) {
 let blogsArea = document.querySelector(".blogsArea");
 let careersArea = document.querySelector(".careersArea");
 
-blogsArea.addEventListener("touchmove", () => {
-  $.fn.fullpage.setAllowScrolling(false);
-});
-blogsArea.addEventListener("touchend", () => {
-  $.fn.fullpage.setAllowScrolling(true);
-});
+// blogsArea.addEventListener("touchmove", () => {
+//   $.fn.fullpage.setAllowScrolling(false);
+// });
+// blogsArea.addEventListener("touchend", () => {
+//   $.fn.fullpage.setAllowScrolling(true);
+// });
 
-careersArea.addEventListener("touchmove", () => {
-  $.fn.fullpage.setAllowScrolling(false);
-});
-careersArea.addEventListener("touchend", () => {
-  $.fn.fullpage.setAllowScrolling(true);
-});
+// careersArea.addEventListener("touchmove", () => {
+//   $.fn.fullpage.setAllowScrolling(false);
+// });
+// careersArea.addEventListener("touchend", () => {
+//   $.fn.fullpage.setAllowScrolling(true);
+// });
