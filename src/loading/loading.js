@@ -217,11 +217,13 @@ let customers = document.querySelector(".customers__names");
 
 function scrollThing(container) {
   let touchStart;
-  container.addEventListener("touchstart", (e) => {
-    console.log("touch");
-
-    touchStart = e.touches[0].pageY;
-  });
+  container.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStart = e.touches[0].pageY;
+    },
+    false
+  );
 
   container.addEventListener(
     "touchmove",
@@ -230,10 +232,7 @@ function scrollThing(container) {
         e.changedTouches[0].pageY > touchStart
           ? e.changedTouches[0].pageY >= touchStart + 100
           : e.changedTouches[0].pageY < touchStart - 100;
-      console.log(scrollingUp);
-      // [...e.changedTouches].forEach((t) => {
-      //   scrollingUp = t.pageY > touchStart;
-      // });
+      console.log("touch move");
 
       let aboutUsScroll =
         container.clientHeight + 1 + $(container).scrollTop() >=
@@ -242,10 +241,6 @@ function scrollThing(container) {
       if (aboutUsScroll && scrollingUp) {
         $.fn.fullpage.setAllowScrolling(true);
         console.log("scrolling up");
-      } else {
-        console.log("scrolling down");
-
-        $.fn.fullpage.setAllowScrolling(false);
       }
 
       if ($(container).scrollTop() < 1 && scrollingUp) {
@@ -259,7 +254,7 @@ function scrollThing(container) {
     "wheel",
     (e) => {
       let aboutUsScroll =
-        container.clientHeight + $(container).scrollTop() ==
+        container.clientHeight + $(container).scrollTop() >=
         container.scrollHeight;
       console.log("wheel eventlistener");
 
