@@ -1,6 +1,10 @@
 /* -------- 
  Typography
 ---------- */
+.header_ozorix-logo {
+  width: 161px;
+  margin-left: 74px;
+}
 
 .home-header__navigation {
   align-items: center;
@@ -32,9 +36,6 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  .home-header__logo {
-    margin-left: 74px;
-  }
 
   .home-header__navigation {
     ul {
@@ -157,13 +158,9 @@
 }
 
 @media (max-width: 700px) {
-  .home__header {
-    .home-header__logo {
-      margin-left: 30px;
-      img {
-        width: 130px;
-      }
-    }
+  .header_ozorix-logo {
+    margin-left: 30px;
+    width: 130px;
   }
 
   .home-big__img {
