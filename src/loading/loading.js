@@ -216,6 +216,45 @@ let careersArea = document.querySelector(".careersArea");
 let customers = document.querySelector(".customers__names");
 
 function scrollThing(container) {
+  let touchStart;
+  container.addEventListener("touchstart", (e) => {
+    console.log("touch");
+
+    touchStart = e.touches[0].pageY;
+  });
+
+  container.addEventListener(
+    "touchmove",
+    (e) => {
+      let scrollingUp =
+        e.changedTouches[0].pageY > touchStart
+          ? e.changedTouches[0].pageY >= touchStart + 100
+          : e.changedTouches[0].pageY < touchStart - 100;
+      console.log(scrollingUp);
+      // [...e.changedTouches].forEach((t) => {
+      //   scrollingUp = t.pageY > touchStart;
+      // });
+
+      let aboutUsScroll =
+        container.clientHeight + 1 + $(container).scrollTop() >=
+        container.scrollHeight;
+
+      if (aboutUsScroll && scrollingUp) {
+        $.fn.fullpage.setAllowScrolling(true);
+        console.log("scrolling up");
+      } else {
+        console.log("scrolling down");
+
+        $.fn.fullpage.setAllowScrolling(false);
+      }
+
+      if ($(container).scrollTop() < 1 && scrollingUp) {
+        $.fn.fullpage.setAllowScrolling(true);
+      }
+    },
+    false
+  );
+
   container.addEventListener(
     "wheel",
     (e) => {
