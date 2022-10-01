@@ -232,7 +232,6 @@ function scrollThing(container) {
         e.changedTouches[0].pageY > touchStart
           ? e.changedTouches[0].pageY >= touchStart + 100
           : e.changedTouches[0].pageY < touchStart - 100;
-      console.log("touch move");
 
       let aboutUsScroll =
         container.clientHeight + 1 + $(container).scrollTop() >=
@@ -240,7 +239,6 @@ function scrollThing(container) {
 
       if (aboutUsScroll && scrollingUp) {
         $.fn.fullpage.setAllowScrolling(true);
-        console.log("scrolling up");
       }
 
       if ($(container).scrollTop() < 1 && scrollingUp) {
@@ -256,7 +254,6 @@ function scrollThing(container) {
       let aboutUsScroll =
         container.clientHeight + $(container).scrollTop() >=
         container.scrollHeight;
-      console.log("wheel eventlistener");
 
       if (aboutUsScroll && e.deltaY > 0) {
         $.fn.fullpage.setAllowScrolling(true);
@@ -273,6 +270,9 @@ function scrollThing(container) {
 
   container.addEventListener("mouseleave", () => {
     $.fn.fullpage.setAllowScrolling(true);
+  });
+  container.addEventListener("mouseenter", () => {
+    $.fn.fullpage.setAllowScrolling(false);
   });
 }
 scrollThing(aboutUsDiv);

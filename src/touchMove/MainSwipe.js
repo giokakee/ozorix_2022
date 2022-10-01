@@ -41,19 +41,19 @@ serviceCover.addEventListener("touchmove", () => {
 // document.addEventListener('touchstart', handleTouchStart, false);
 // document.addEventListener('touchmove', handleTouchMove, false);
 
-serviceCover.addEventListener("touchstart", handleTouchStart, {
-  capture: true,
-});
+// serviceCover.addEventListener("touchstart", handleTouchStart, {
+//   capture: true,
+// });
 serviceCover.addEventListener("touchmove", handleTouchMove, { capture: true });
 
-projectCover.addEventListener("touchstart", handleTouchStart3, {
-  capture: true,
-});
+// projectCover.addEventListener("touchstart", handleTouchStart3, {
+//   capture: true,
+// });
 projectCover.addEventListener("touchmove", handleTouchMove3, { capture: true });
 
-contactCover.addEventListener("touchstart", handleTouchStart2, {
-  capture: true,
-});
+// contactCover.addEventListener("touchstart", handleTouchStart2, {
+//   capture: true,
+// });
 contactCover.addEventListener("touchmove", handleTouchMove2, { capture: true });
 
 serviceCover.addEventListener("click", handleTouchMove, { capture: true });
@@ -205,8 +205,8 @@ function handleTouchMove3(evt) {
 
 // for blogs and careers touchscroll
 
-let blogsArea = document.querySelector(".blogsArea");
-let careersArea = document.querySelector(".careersArea");
+// let blogsArea = document.querySelector(".blogsArea");
+// let careersArea = document.querySelector(".careersArea");
 
 // blogsArea.addEventListener("touchmove", () => {
 //   $.fn.fullpage.setAllowScrolling(false);
