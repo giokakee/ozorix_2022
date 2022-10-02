@@ -214,6 +214,9 @@ let aboutUsDiv = document.querySelector(".aboutUs-body-text");
 let blogsArea = document.querySelector(".blogsArea");
 let careersArea = document.querySelector(".careersArea");
 let customers = document.querySelector(".customers__names");
+let project = document.querySelector(".swiper-wrapper");
+
+let timeout;
 
 function scrollThing(container) {
   let touchStart;
@@ -230,19 +233,20 @@ function scrollThing(container) {
     (e) => {
       let scrollingUp =
         e.changedTouches[0].pageY > touchStart
-          ? e.changedTouches[0].pageY >= touchStart + 100
-          : e.changedTouches[0].pageY < touchStart - 100;
+          ? e.changedTouches[0].pageY >= touchStart + 150
+          : e.changedTouches[0].pageY < touchStart - 150;
 
       let aboutUsScroll =
         container.clientHeight + 1 + $(container).scrollTop() >=
         container.scrollHeight;
 
-      if (aboutUsScroll && scrollingUp) {
+      if (
+        (aboutUsScroll && scrollingUp) ||
+        ($(container).scrollTop() < 1 && scrollingUp)
+      ) {
         $.fn.fullpage.setAllowScrolling(true);
-      }
-
-      if ($(container).scrollTop() < 1 && scrollingUp) {
-        $.fn.fullpage.setAllowScrolling(true);
+      } else {
+        $.fn.fullpage.setAllowScrolling(false);
       }
     },
     false
@@ -255,14 +259,15 @@ function scrollThing(container) {
         container.clientHeight + $(container).scrollTop() >=
         container.scrollHeight;
 
-      if (aboutUsScroll && e.deltaY > 0) {
-        $.fn.fullpage.setAllowScrolling(true);
+      if (
+        (aboutUsScroll && e.deltaY > 0) ||
+        ($(container).scrollTop() < 1 && e.deltaY < 0)
+      ) {
+        timeout = setTimeout(() => {
+          $.fn.fullpage.setAllowScrolling(true);
+        }, 300);
       } else {
         $.fn.fullpage.setAllowScrolling(false);
-      }
-
-      if ($(container).scrollTop() < 1 && e.deltaY < 0) {
-        $.fn.fullpage.setAllowScrolling(true);
       }
     },
     false
@@ -280,6 +285,7 @@ scrollThing(servicesDiv);
 scrollThing(blogsArea);
 scrollThing(careersArea);
 scrollThing(customers);
+scrollThing(project);
 
 /* --------
  clear website url before refresh
