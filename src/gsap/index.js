@@ -9,13 +9,13 @@ let sectionAnimation = () => {
   let homeAnimation = () => {
     let home = gsap.timeline({ defaults: { opacity: 0, ease: "none" } });
     // home.from(".introText", { duration: 0.7, opacity: 0 });
-    home.from(".home__title-svg0", { duration: 0.3, opacity: 0 });
+    // home.from(".home__title-svg0", { duration: 0.3, opacity: 0 });
 
     for (let i = 1; i <= 7; i++) {
       home.from(".home__title-svg" + i, { duration: 0.3 });
     }
 
-    home.from(".home__title-svg39", { duration: 0.3, opacity: 0 });
+    // home.from(".home__title-svg39", { duration: 0.3, opacity: 0 });
     home.from(".home__header", { duration: 0.3, opacity: 0 }, "-=1");
 
     home.pause();

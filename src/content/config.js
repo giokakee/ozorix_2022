@@ -164,7 +164,7 @@ export let config = {
   ],
 
   aboutUsTextData: `
-    We are Ozorix, a Digital agency specializing in complex IT solutions. 
+     We are Ozorix, a Digital agency specializing in complex IT solutions. 
     Our goal is to create, effective business solutions customized to clients needs. 
     <br /> <br /> <br />
     

@@ -1,7 +1,6 @@
 /* --------
  Typography
 ---------- */
-
 .aboutUs-body-text {
   font-size: 18px;
   color: #e6e6e6;
@@ -117,6 +116,7 @@
 @media (max-width: 1200px) {
   .aboutUs-body-text {
     font-size: 2rem;
+    height: 79%;
   }
   .abVal {
     font-size: 4rem;
@@ -132,10 +132,6 @@ Body Area
 }
 
 @media (max-width: 1000px) {
-  .aboutUs-body-text {
-    height: 68%;
-  }
-
   .aboutUs-body-text {
     font-size: 18px;
     color: #e6e6e6;

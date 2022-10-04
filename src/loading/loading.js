@@ -155,6 +155,7 @@ new Swiper(".swiper-mobile__container", {
 });
 
 // init full page js, and resume animations
+
 $("#fullPage").fullpage({
   scrollingSpeed: config.scrollSpeed,
   normalScrollElements:
@@ -193,6 +194,7 @@ $("#fullPage").fullpage({
 
   onLeave: function (index, nextIndex, direction) {
     let leavingSection = $(this);
+    $.fn.fullpage.setAllowScrolling(false);
 
     if (checkGsapActive) {
       leaveSection.map((anim) => {
@@ -207,8 +209,6 @@ $("#fullPage").fullpage({
   },
 });
 
-$.fn.fullpage.setAllowScrolling(false);
-
 let servicesDiv = document.querySelector(".services-body__right");
 let aboutUsDiv = document.querySelector(".aboutUs-body-text");
 let blogsArea = document.querySelector(".blogsArea");
@@ -218,12 +218,13 @@ let project = document.querySelector(".swiper-wrapper");
 
 let timeout;
 
-function scrollThing(container) {
+const scrollThing = (container) => {
   let touchStart;
   container.addEventListener(
     "touchstart",
     (e) => {
       touchStart = e.touches[0].pageY;
+      $.fn.fullpage.setAllowScrolling(false);
     },
     false
   );
@@ -245,6 +246,7 @@ function scrollThing(container) {
         ($(container).scrollTop() < 1 && scrollingUp)
       ) {
         $.fn.fullpage.setAllowScrolling(true);
+        touchStart = e.changedTouches[0].pageY;
       } else {
         $.fn.fullpage.setAllowScrolling(false);
       }
@@ -265,9 +267,10 @@ function scrollThing(container) {
       ) {
         timeout = setTimeout(() => {
           $.fn.fullpage.setAllowScrolling(true);
-        }, 300);
+        }, 700);
       } else {
         $.fn.fullpage.setAllowScrolling(false);
+        clearTimeout(timeout);
       }
     },
     false
@@ -279,7 +282,7 @@ function scrollThing(container) {
   container.addEventListener("mouseenter", () => {
     $.fn.fullpage.setAllowScrolling(false);
   });
-}
+};
 scrollThing(aboutUsDiv);
 scrollThing(servicesDiv);
 scrollThing(blogsArea);

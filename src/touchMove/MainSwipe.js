@@ -41,26 +41,41 @@ serviceCover.addEventListener("touchmove", () => {
 // document.addEventListener('touchstart', handleTouchStart, false);
 // document.addEventListener('touchmove', handleTouchMove, false);
 
-// serviceCover.addEventListener("touchstart", handleTouchStart, {
-//   capture: true,
-// });
+serviceCover.addEventListener(
+  "touchstart",
+  handleTouchStart,
+  {
+    capture: true,
+  },
+  false
+);
 serviceCover.addEventListener("touchmove", handleTouchMove, { capture: true });
 
-// projectCover.addEventListener("touchstart", handleTouchStart3, {
-//   capture: true,
-// });
+projectCover.addEventListener(
+  "touchstart",
+  handleTouchStart3,
+  {
+    capture: true,
+  },
+  false
+);
 projectCover.addEventListener("touchmove", handleTouchMove3, { capture: true });
 
-// contactCover.addEventListener("touchstart", handleTouchStart2, {
-//   capture: true,
-// });
+contactCover.addEventListener(
+  "touchstart",
+  handleTouchStart2,
+  {
+    capture: true,
+  },
+  false
+);
 contactCover.addEventListener("touchmove", handleTouchMove2, { capture: true });
 
-serviceCover.addEventListener("click", handleTouchMove, { capture: true });
+serviceCover.addEventListener("touchmove", handleTouchMove, { capture: true });
 
-projectCover.addEventListener("click", handleTouchMove3, { capture: true });
+projectCover.addEventListener("touchmove", handleTouchMove3, { capture: true });
 
-contactCover.addEventListener("click", handleTouchMove2, { capture: true });
+contactCover.addEventListener("touchmove", handleTouchMove2, { capture: true });
 
 let xDown = null;
 let yDown = null;
@@ -177,16 +192,16 @@ function handleTouchMove3(evt) {
       projectCover.style.transform = "translateX(-150%)";
       document.querySelector(".project-body__right").style.visibility =
         "visible";
-      let bulletws = document.querySelector(".mobile__pagination").children;
-      Array.from(bulletws).forEach((el, index) => {
-        index++;
-        let zero = "0";
-        if (index > 9) {
-          zero = "";
-        }
+      // let bulletws = document.querySelector(".mobile__pagination").children;
+      // Array.from(bulletws).forEach((el, index) => {
+      //   index++;
+      //   let zero = "0";
+      //   if (index > 9) {
+      //     zero = "";
+      //   }
 
-        el.innerHTML = zero + index;
-      });
+      //   el.innerHTML = zero + index;
+      // });
     } else {
       // swipe right
     }
@@ -202,22 +217,3 @@ function handleTouchMove3(evt) {
   xDown = null;
   yDown = null;
 }
-
-// for blogs and careers touchscroll
-
-// let blogsArea = document.querySelector(".blogsArea");
-// let careersArea = document.querySelector(".careersArea");
-
-// blogsArea.addEventListener("touchmove", () => {
-//   $.fn.fullpage.setAllowScrolling(false);
-// });
-// blogsArea.addEventListener("touchend", () => {
-//   $.fn.fullpage.setAllowScrolling(true);
-// });
-
-// careersArea.addEventListener("touchmove", () => {
-//   $.fn.fullpage.setAllowScrolling(false);
-// });
-// careersArea.addEventListener("touchend", () => {
-//   $.fn.fullpage.setAllowScrolling(true);
-// });
