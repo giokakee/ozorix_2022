@@ -194,8 +194,6 @@ $("#fullPage").fullpage({
 
   onLeave: function (index, nextIndex, direction) {
     let leavingSection = $(this);
-    $.fn.fullpage.setAllowScrolling(false);
-
     if (checkGsapActive) {
       leaveSection.map((anim) => {
         if (
@@ -215,6 +213,7 @@ let blogsArea = document.querySelector(".blogsArea");
 let careersArea = document.querySelector(".careersArea");
 let customers = document.querySelector(".customers__names");
 let project = document.querySelector(".swiper-wrapper");
+let homeBody = document.querySelector(".home__body");
 
 let timeout;
 let scrollAllowed = false;
@@ -275,22 +274,34 @@ const scrollThing = (container) => {
         (aboutUsScroll && e.deltaY > 0) ||
         ($(container).scrollTop() < 1 && e.deltaY < 0)
       ) {
-        timeout = setTimeout(() => {
-          $.fn.fullpage.setAllowScrolling(true);
-        }, 700);
+        if (!scrollAllowed) {
+          timeout = setTimeout(() => {
+            $.fn.fullpage.setAllowScrolling(true);
+            scrollAllowed = true;
+          }, 300);
+        }
       } else {
-        $.fn.fullpage.setAllowScrolling(false);
-        clearTimeout(timeout);
+        if (scrollAllowed) {
+          $.fn.fullpage.setAllowScrolling(false);
+          scrollAllowed = false;
+          clearTimeout(timeout);
+        }
       }
     },
     false
   );
 
   container.addEventListener("mouseleave", () => {
-    $.fn.fullpage.setAllowScrolling(true);
+    if (!scrollAllowed) {
+      $.fn.fullpage.setAllowScrolling(true);
+      scrollAllowed = true;
+    }
   });
   container.addEventListener("mouseenter", () => {
-    $.fn.fullpage.setAllowScrolling(false);
+    if (scrollAllowed) {
+      $.fn.fullpage.setAllowScrolling(false);
+      scrollAllowed = false;
+    }
   });
 };
 scrollThing(aboutUsDiv);
@@ -299,6 +310,7 @@ scrollThing(blogsArea);
 scrollThing(careersArea);
 scrollThing(customers);
 scrollThing(project);
+scrollThing(homeBody);
 
 /* --------
  clear website url before refresh
