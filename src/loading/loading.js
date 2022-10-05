@@ -241,14 +241,16 @@ const scrollThing = (container) => {
         container.clientHeight + 1 + $(container).scrollTop() >=
         container.scrollHeight;
 
-      if (
-        (aboutUsScroll && scrollingUp) ||
-        ($(container).scrollTop() < 1 && scrollingUp)
-      ) {
+      if (aboutUsScroll && scrollingUp) {
         $.fn.fullpage.setAllowScrolling(true);
         touchStart = e.changedTouches[0].pageY;
       } else {
         $.fn.fullpage.setAllowScrolling(false);
+      }
+
+      if ($(container).scrollTop() < 1 && scrollingUp) {
+        $.fn.fullpage.setAllowScrolling(true);
+        touchStart = e.changedTouches[0].pageY;
       }
     },
     false
