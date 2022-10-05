@@ -217,14 +217,14 @@ let customers = document.querySelector(".customers__names");
 let project = document.querySelector(".swiper-wrapper");
 
 let timeout;
+let scrollAllowed = false;
+let touchStart;
 
 const scrollThing = (container) => {
-  let touchStart;
   container.addEventListener(
     "touchstart",
     (e) => {
       touchStart = e.touches[0].pageY;
-      $.fn.fullpage.setAllowScrolling(false);
     },
     false
   );
@@ -234,23 +234,31 @@ const scrollThing = (container) => {
     (e) => {
       let scrollingUp =
         e.changedTouches[0].pageY > touchStart
-          ? e.changedTouches[0].pageY >= touchStart + 150
+          ? e.changedTouches[0].pageY > touchStart + 150
           : e.changedTouches[0].pageY < touchStart - 150;
 
       let aboutUsScroll =
         container.clientHeight + 1 + $(container).scrollTop() >=
         container.scrollHeight;
-
       if (aboutUsScroll && scrollingUp) {
-        $.fn.fullpage.setAllowScrolling(true);
-        touchStart = e.changedTouches[0].pageY;
-      } else {
-        $.fn.fullpage.setAllowScrolling(false);
+        if (!scrollAllowed) {
+          $.fn.fullpage.setAllowScrolling(true);
+          scrollAllowed = true;
+        }
       }
 
       if ($(container).scrollTop() < 1 && scrollingUp) {
-        $.fn.fullpage.setAllowScrolling(true);
-        touchStart = e.changedTouches[0].pageY;
+        if (!scrollAllowed) {
+          $.fn.fullpage.setAllowScrolling(true);
+          scrollAllowed = true;
+        }
+      }
+
+      if (!scrollingUp) {
+        if (scrollAllowed) {
+          $.fn.fullpage.setAllowScrolling(false);
+          scrollAllowed = false;
+        }
       }
     },
     false
