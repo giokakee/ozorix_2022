@@ -224,59 +224,6 @@ document
   .querySelector(".linkedin")
   .setAttribute("href", config.socialLinks.linkedin);
 
-//blogs area
-
-let blogsArea = document.querySelector(".blogsArea");
-let { blogData } = config;
-
-blogData.forEach((blogData, i) => {
-  let blogsDiv = document.createElement("div");
-  blogsDiv.classList.add("blogDiv");
-
-  let title = document.createElement("p");
-  title.classList.add("title");
-  title.innerHTML = blogData.title;
-
-  let blog = document.createElement("p");
-  blog.classList.add("blog");
-  blog.innerHTML = blogData.text.slice(0, 350);
-
-  let dots = document.createElement("span");
-  dots.classList.add("dots");
-  dots.innerHTML = "...";
-  blog.appendChild(dots);
-
-  let moreText = document.createElement("span");
-  moreText.classList.add("moreText");
-  moreText.innerHTML = blogData.text;
-  blog.appendChild(moreText);
-
-  let buttonDiv = document.createElement("div");
-  buttonDiv.classList.add("buttonDiv");
-
-  let leftBracket = document.createElement("img");
-  leftBracket.classList.add("buttonLeftBracket");
-  leftBracket.src = "./assets/shared/buttonBracketLeft.svg";
-
-  let blogBtn = document.createElement("button");
-  blogBtn.classList.add("blogBtn");
-  blogBtn.innerHTML = "Read more";
-
-  let rightBracket = document.createElement("img");
-  rightBracket.classList.add("buttonRightBracket");
-  rightBracket.src = "./assets/shared/buttonBracketRight.svg";
-
-  buttonDiv.appendChild(leftBracket);
-  buttonDiv.appendChild(blogBtn);
-  buttonDiv.appendChild(rightBracket);
-
-  blogsDiv.appendChild(title);
-  blogsDiv.appendChild(blog);
-  blogsDiv.appendChild(buttonDiv);
-
-  blogsArea.appendChild(blogsDiv);
-});
-
 //careers area
 
 let { careersData } = config;

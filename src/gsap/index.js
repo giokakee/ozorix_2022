@@ -190,27 +190,6 @@ let sectionAnimation = () => {
   };
 
   /* --------
-   blogs animation section
-  ---------- */
-  let blogsAnimation = () => {
-    let blogs = gsap.timeline({ defaults: { opacity: 0, ease: "back" } });
-
-    blogs
-      .from(".glass", { duration: 1.5, x: -700 })
-      .from(".glass1", { duration: 1.5, x: 700 }, "<")
-      .from(".blogDiv", { duration: 1.5, stagger: 0.3, y: -500, opacity: 0 })
-      .from(".learnToCode", {
-        duration: 1.3,
-        y: 500,
-        opacity: 0,
-        ease: "elastic.out(1, 0.7)",
-      });
-
-    blogs.pause();
-    return blogs;
-  };
-
-  /* --------
    careers animation section
   ---------- */
   let careersAnimation = () => {
@@ -240,7 +219,6 @@ let sectionAnimation = () => {
     project: projectAnimation(),
     services: servicesAnimation(),
     contact: contactAnimation(),
-    blogs: blogsAnimation(),
     careers: careersAnimation(),
   };
 };
@@ -281,12 +259,6 @@ let ScrollAnimations = () => {
     .from(".contact-body__left", { duration: 1, x: -500, opacity: 0 })
     .from(".contact-body__right", { duration: 1, x: 500, opacity: 0 }, "<");
 
-  let blogsAnim = gsap.timeline();
-
-  blogsAnim
-    .from(".blogs-body__left", { duration: 1, x: -1000 })
-    .from(".blogs-body__right", { duration: 1, x: 1000 }, "<");
-
   let careersAnim = gsap.timeline();
 
   careersAnim
@@ -299,7 +271,6 @@ let ScrollAnimations = () => {
     projectAnim,
     customersAnim,
     contactAnim,
-    blogsAnim,
     careersAnim,
   };
 };

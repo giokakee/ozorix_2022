@@ -91,7 +91,7 @@ let leaveSection = [
     direction: "down",
     secIndex: 8,
     secDirection: "up",
-    animation: "blogsAnim",
+    animation: "contactAnim",
     method: "restart",
   },
   {
@@ -99,25 +99,25 @@ let leaveSection = [
     direction: "down",
     secIndex: 7,
     secDirection: "up",
-    animation: "blogsAnim",
-    method: "reverse",
-  },
-  {
-    index: 7,
-    direction: "down",
-    secIndex: 9,
-    secDirection: "up",
-    animation: "contactAnim",
-    method: "restart",
-  },
-  {
-    index: 8,
-    direction: "down",
-    secIndex: 8,
-    secDirection: "up",
     animation: "contactAnim",
     method: "reverse",
   },
+  // {
+  //   index: 7,
+  //   direction: "down",
+  //   secIndex: 9,
+  //   secDirection: "up",
+  //   animation: "contactAnim",
+  //   method: "restart",
+  // },
+  // {
+  //   index: 8,
+  //   direction: "down",
+  //   secIndex: 8,
+  //   secDirection: "up",
+  //   animation: "contactAnim",
+  //   method: "reverse",
+  // },
 ];
 
 const animated = document.querySelector(".loading__logo-right");
@@ -159,7 +159,7 @@ new Swiper(".swiper-mobile__container", {
 $("#fullPage").fullpage({
   scrollingSpeed: config.scrollSpeed,
   normalScrollElements:
-    ".aboutUs-body-text, .services-body__right, .swiper-mobile__container, .section__navigation, .blogsArea, .careersArea, .customers__names",
+    ".aboutUs-body-text, .services-body__right, .swiper-mobile__container, .section__navigation,  .careersArea, .customers__names",
 
   afterLoad: function (anchorLink, index) {
     let loadedSection = $(this);
@@ -184,9 +184,6 @@ $("#fullPage").fullpage({
           sectAnim.careers.resume();
           break;
         case 7:
-          sectAnim.blogs.resume();
-          break;
-        case 8:
           sectAnim.contact.resume();
           break;
       }
@@ -209,7 +206,7 @@ $("#fullPage").fullpage({
 
 let servicesDiv = document.querySelector(".services-body__right");
 let aboutUsDiv = document.querySelector(".aboutUs-body-text");
-let blogsArea = document.querySelector(".blogsArea");
+// let blogsArea = document.querySelector(".blogsArea");
 let careersArea = document.querySelector(".careersArea");
 let customers = document.querySelector(".customers__names");
 let project = document.querySelector(".swiper-wrapper");
@@ -306,7 +303,7 @@ const scrollThing = (container) => {
 };
 scrollThing(aboutUsDiv);
 scrollThing(servicesDiv);
-scrollThing(blogsArea);
+// scrollThing(blogsArea);
 scrollThing(careersArea);
 scrollThing(customers);
 scrollThing(project);
@@ -333,44 +330,44 @@ jQuery.event.special.touchstart = {
 /* --------
  for "read more" blogs
 ---------- */
-let blogDiv = document.querySelectorAll(".blogDiv");
+// let blogDiv = document.querySelectorAll(".blogDiv");
 
-let positionY;
-let positionX;
+// let positionY;
+// let positionX;
 
-blogsArea.addEventListener("scroll", () => {
-  let oneBlogArea = document.querySelector(".oneBlogArea");
-  !oneBlogArea && (positionY = $(".blogsArea").scrollTop());
-  !oneBlogArea && (positionX = $(".blogsArea").scrollLeft());
-});
+// blogsArea.addEventListener("scroll", () => {
+//   let oneBlogArea = document.querySelector(".oneBlogArea");
+//   !oneBlogArea && (positionY = $(".blogsArea").scrollTop());
+//   !oneBlogArea && (positionX = $(".blogsArea").scrollLeft());
+// });
 
-blogDiv.forEach((element) => {
-  let blogBtn = element.querySelector(".blogBtn");
-  let dots = element.querySelector(".dots");
+// blogDiv.forEach((element) => {
+//   let blogBtn = element.querySelector(".blogBtn");
+//   let dots = element.querySelector(".dots");
 
-  blogBtn.addEventListener("click", (e) => {
-    element.classList.toggle("readMore");
-    dots.classList.toggle("nonDisplay");
-    blogsArea.classList.toggle("oneBlogArea");
+//   blogBtn.addEventListener("click", (e) => {
+//     element.classList.toggle("readMore");
+//     dots.classList.toggle("nonDisplay");
+//     blogsArea.classList.toggle("oneBlogArea");
 
-    blogDiv.forEach((blog) => {
-      blog !== element && blog.classList.toggle("nonDisplay");
-      let oneBlogArea = document.querySelector(".oneBlogArea");
+//     blogDiv.forEach((blog) => {
+//       blog !== element && blog.classList.toggle("nonDisplay");
+//       let oneBlogArea = document.querySelector(".oneBlogArea");
 
-      screen.width > 1000
-        ? oneBlogArea
-          ? blogsArea.scrollTo({ top: 0 })
-          : blogsArea.scrollTo({ top: positionY || 0 })
-        : oneBlogArea
-        ? blogsArea.scrollTo({ top: 0 })
-        : blogsArea.scrollTo({ left: positionX || 0 });
-    });
+//       screen.width > 1000
+//         ? oneBlogArea
+//           ? blogsArea.scrollTo({ top: 0 })
+//           : blogsArea.scrollTo({ top: positionY || 0 })
+//         : oneBlogArea
+//         ? blogsArea.scrollTo({ top: 0 })
+//         : blogsArea.scrollTo({ left: positionX || 0 });
+//     });
 
-    blogBtn.innerText === "Read more"
-      ? (blogBtn.innerText = "Read less")
-      : (blogBtn.innerText = "Read more");
-  });
-});
+//     blogBtn.innerText === "Read more"
+//       ? (blogBtn.innerText = "Read less")
+//       : (blogBtn.innerText = "Read more");
+//   });
+// });
 
 /* --------
 Careers
